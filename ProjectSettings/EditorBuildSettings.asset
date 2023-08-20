@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: dab3dc49f9d423245833e1563f2ac93d
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: ee166c4f39db39144b524fb2bbf47696
+  - enabled: 0
+    path: Assets/Scenes/Main Menu Continue.unity
+    guid: 402ebf954e134984c8af8b3103958b98
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: 9da84e8c3cb060b4db2fa6c23ca38235
+  - enabled: 0
+    path: Assets/Scenes/Setting2.unity
+    guid: e4986e95d89ec2d44a152e7566c9afd8
+  - enabled: 1
+    path: Assets/Scenes/Confirm Quit Game.unity
+    guid: 1f2acaf20b72d4f4681a0ccd21649c0e
+  - enabled: 0
+    path: Assets/Scenes/Confirm Quit Game2.unity
+    guid: abbce2f31275c084c87052ed10c76d54
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 02628f545490e3141a6e66c8233810f2
+  - enabled: 1
+    path: Assets/Scenes/Story 1.unity
+    guid: 147346fb0f0e34b41872362015a3db13
+  - enabled: 1
+    path: Assets/Scenes/Story 2.unity
+    guid: f498ccfc20d61f14fbc16372a669147b
+  - enabled: 1
+    path: Assets/Scenes/Story 3.unity
+    guid: fc520942209a0c241a497f92d5c1b01f
+  - enabled: 1
+    path: Assets/Scenes/Story 4.unity
+    guid: 5c9432abf4dfb0d4aa82acd448bbb4e5
+  - enabled: 1
+    path: Assets/Scenes/Story 5.unity
+    guid: d9148400fc1a5eb46ad587004b2fa6d1
+  - enabled: 1
+    path: Assets/Scenes/Story 6.unity
+    guid: 7e02b6c5170af284c90ba91f01e9b7d8
+  - enabled: 1
+    path: Assets/Scenes/Story 7.unity
+    guid: 45b0f116d26c175418ce1dc3f1cd514c
+  - enabled: 1
+    path: Assets/Scenes/Story 8.unity
+    guid: 5b540c62806d3d948a93e21feab1b2d8
+  - enabled: 1
+    path: Assets/Scenes/Gameplay1.unity
+    guid: 935af003e9f9bd445aaad1008298bf90
+  - enabled: 1
+    path: Assets/Scenes/Gameplay2.unity
+    guid: 9720b68681ba7aa41ae960e10af90fd7
+  - enabled: 1
+    path: Assets/Scenes/Gameplay3.unity
+    guid: e610556e75526584ba3b794336e0a9c9
+  - enabled: 1
+    path: Assets/Scenes/SkillShop.unity
+    guid: b6c9c054da2092f4d96dfed1b8118e0c
+  m_configObjects: {}

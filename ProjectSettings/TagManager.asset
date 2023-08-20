@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - Obstacle
+  - Checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Enemy
+  - Asset
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 18583241
+    locked: 0
+  - name: ThirdGround
+    uniqueID: 759220923
+    locked: 0
+  - name: Entity
+    uniqueID: 2898706461
+    locked: 0
+  - name: SecGround
+    uniqueID: 3002449569
+    locked: 0
+  - name: Foretree
+    uniqueID: 3317664669
+    locked: 0
+  - name: Ground
+    uniqueID: 4177748751
+    locked: 0
+  - name: Skill Shop
+    uniqueID: 3621077685
+    locked: 0
+  - name: NPC
+    uniqueID: 4128229425
+    locked: 0
+  - name: Trap
+    uniqueID: 2473380651
+    locked: 0
+  - name: Player
+    uniqueID: 1127449919
+    locked: 0
+  - name: Enemy
+    uniqueID: 1091978299
+    locked: 0
+  - name: Asset
+    uniqueID: 3165267795
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1979146777
+    locked: 0
+  - name: Effect
+    uniqueID: 350714741
+    locked: 0
