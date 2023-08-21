@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -11,6 +12,25 @@ public class PlayerControl : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+
+    public static int numberOfGems;
+    public Text gemCountText;
+    public int gemCount = 0;
+
+    public void CollectGem()
+    {
+        Debug.Log("CollectGem Worked");
+        gemCount++; 
+        UpdateGemCountUI(); 
+    }
+
+    private void UpdateGemCountUI()
+    {
+        if (gemCountText != null)
+        {
+            gemCountText.text = gemCount.ToString();
+        }
+    }
 
     [SerializeField] private LayerMask jumpableGround;
 

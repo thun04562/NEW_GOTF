@@ -48258,6 +48258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSound: {fileID: 8300000, guid: b3adf44db6eba614a9627390647be535, type: 3}
   runSound: {fileID: 0}
+  gemCountText: {fileID: 1239130954}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -80477,7 +80478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1874147259
 Transform:
   m_ObjectHideFlags: 0
@@ -93447,11 +93448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988281, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.01
+      value: -7.6
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988281, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.047987223
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988281, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93487,15 +93488,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988286, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988286, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_SortingLayerID
-      value: -977302627
+      value: -673889611
       objectReference: {fileID: 0}
     - target: {fileID: 3188708812260988287, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_Name
       value: GemChest
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188708812260988287, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188708813159570090, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094774445079581484, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+      propertyPath: m_Size.x
+      value: 3.7892036
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094774445079581484, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.12569618
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb083efcc818964e8153e934fdb1981, type: 3}
