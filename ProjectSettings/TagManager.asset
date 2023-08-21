@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Checkpoint
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Enemy
   - Asset
   - Obstacle
-  - 
-  - 
+  - GemChest
+  - Gems
   - 
   - 
   - 
