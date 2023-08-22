@@ -2167,7 +2167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
   health: 2
-  animator: {fileID: 317887823}
+  deathEffect: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!58 &317887827
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15883,19 +15884,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15903,7 +15904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -16281,19 +16282,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16301,7 +16302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17806,6 +17807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314a5da95ed62124288a19bd08d36196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skullBone: {fileID: 0}
+  smallBone: {fileID: 0}
+  rBone: {fileID: 0}
+  lBone: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 227892ecfcbb2d140a07400a53d59dba, type: 3}
   deathSound: {fileID: 8300000, guid: 1fff8362b7bb1f94e8398a5cd6e6ed46, type: 3}
   animator: {fileID: 1140900802}
@@ -17847,8 +17852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c9d37dea685984896ec9e885ad623f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckpointSound: {fileID: 8300000, guid: abf08ba5112478b4a873b9f32ac7eb17, type: 3}
-  parallaxScrolling: {fileID: 0}
+  respawnPoint: {fileID: 0}
+  respawnTime: 2
 --- !u!1 &1148115683
 GameObject:
   m_ObjectHideFlags: 0
@@ -22695,19 +22700,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22715,7 +22720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -22938,7 +22943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
   health: 2
-  animator: {fileID: 1890442466}
+  deathEffect: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!58 &1890442470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23751,19 +23757,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23771,7 +23777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6780717988998997358, guid: 1b628f9973118ae40bd76a9bbee845d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
