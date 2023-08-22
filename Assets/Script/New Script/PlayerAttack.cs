@@ -12,14 +12,18 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+           
         }
+        
     }
 
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        
+               
     }
+
+    
 
 
     /*[SerializeField] private float attackCooldown;

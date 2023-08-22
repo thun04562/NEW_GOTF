@@ -15,6 +15,16 @@ public class ArrowShoot : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
+    void SetDirection(float _direction)
+    {
+        float localScaleX = transform.localScale.x;
+        if (Mathf.Sign(localScaleX) != _direction)
+        {
+            localScaleX = -localScaleX;
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
 
@@ -29,4 +39,5 @@ public class ArrowShoot : MonoBehaviour
         Destroy(gameObject);
     }
 
+    
 }

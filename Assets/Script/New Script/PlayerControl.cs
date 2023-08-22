@@ -13,9 +13,30 @@ public class PlayerControl : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    public Image ManaBar;
+    public float Mana, maxMana;
+    public float ManaCost;
+
+    public float runcost;
+    public float chargeRate;
+
+    public Coroutine recharge;
+
+    [SerializeField]private TrailRenderer tr;
+
     public static int numberOfGems;
     public Text gemCountText;
     public int gemCount = 0;
+
+
+   
+    private bool isFacingRight = true;
 
     public void CollectGem()
     {
@@ -45,6 +66,8 @@ public class PlayerControl : MonoBehaviour
 
     private void Start()
     {
+        
+
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -53,6 +76,10 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        if (isDashing)
+        {
+            return;
+        }
 
 
         // Player jump input
@@ -68,8 +95,6 @@ public class PlayerControl : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         SoundManager.instance.PlaySound(runSound);
 
-        // Player shooting input (you can add this later if needed)
-        // ...
 
         // Check if the player is falling and holding the Sit button, prioritize sitting
         if (Input.GetButton("Sit") && IsGrounded())
@@ -82,19 +107,10 @@ public class PlayerControl : MonoBehaviour
             
             isSitting=false;
             anim.SetBool("isSitting", isSitting);
+            
 
         }
 
-        /*if (state == MovementState.Falling && Input.GetButton("Sit"))
-        {
-            isSitting = true;
-        }
-        else
-        {
-            // Player sitting input
-            isSitting = Input.GetButton("Sit");
-            anim.SetBool("isSitting", isSitting);
-        }*/
 
         if (isSitting && IsGrounded())
         {
@@ -105,7 +121,7 @@ public class PlayerControl : MonoBehaviour
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
         }
 
-        /*// Update player's velocity based on the movement and sitting state
+        /* pdate player's velocity based on the movement and sitting state
         if (!isSitting) // Player can move only if not sitting
         {
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
@@ -120,24 +136,49 @@ public class PlayerControl : MonoBehaviour
         if (dirX > 0.01f)
         {
             transform.localScale = Vector3.one;
+
         }
         else if(dirX < -0.01f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+            
         }
 
-        /* if (dirX < 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Mana >= 25)
         {
-            sprite.flipX = true;
-        }
-        else if (dirX > 0)
-        {
-            sprite.flipX = false;
-        }*/
+            //ManaBar.instance.UseMana(20);
 
-        // Update the animation state
+            Mana -= ManaCost;
+            if (Mana < 0)
+            {
+                Mana = 0;
+            }
+            ManaBar.fillAmount = Mana / maxMana;
+            StartCoroutine(Dash());
+            
+            if(recharge != null)
+            {
+                StopCoroutine(recharge);
+                recharge = StartCoroutine(RechargeMana());
+            }
+            
+            
+        }
+        
+        
+        
         AnimationState();
     }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+    }
+
+
 
     private void AnimationState()
     {
@@ -182,4 +223,134 @@ public class PlayerControl : MonoBehaviour
     {
         return dirX == 0 && IsGrounded();
     }
+
+    /*private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;        
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+
+        Mana -= runcost * Time.deltaTime;
+        if(Mana < 0)
+        {
+            Mana = 0;
+        }
+        ManaBar.fillAmount = Mana / maxMana;
+
+        if (recharge != null)
+        {
+            StopCoroutine(recharge);
+            recharge = StartCoroutine(RechargeMana());
+        }
+    }
+
+    private IEnumerator RechargeMana()
+    {
+        yield return new WaitForSeconds(1f);
+
+        while(Mana < maxMana)
+        {
+            Mana += chargeRate / 10f;
+            if(Mana > maxMana)
+            {
+                Mana = maxMana;
+            }
+            ManaBar.fillAmount = Mana / maxMana;
+            yield return new WaitForSeconds(.1f);
+        }
+    }*/
+
+    private IEnumerator Dash()
+    {
+        if (Mana >= ManaCost) // Check if there's enough mana to dash
+        {
+            // Deduct mana cost
+            Mana -= ManaCost;
+            if (Mana < 0)
+            {
+                Mana = 0;
+            }
+            ManaBar.fillAmount = Mana / maxMana;
+
+            canDash = false;
+            isDashing = true;
+            float originalGravity = rb.gravityScale;
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+            tr.emitting = true;
+            yield return new WaitForSeconds(dashingTime);
+            tr.emitting = false;
+            rb.gravityScale = originalGravity;
+            isDashing = false;
+            yield return new WaitForSeconds(dashingCooldown);
+            canDash = true;
+
+            // Start mana recharge coroutine if not already started
+            if (recharge == null)
+            {
+                recharge = StartCoroutine(RechargeMana());
+            }
+        }
+
+        /*if (Mana >= ManaCost) // Check if there's enough mana to dash
+        {
+            canDash = false;
+            isDashing = true;
+            float originalGravity = rb.gravityScale;
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+            tr.emitting = true;
+            yield return new WaitForSeconds(dashingTime);
+            tr.emitting = false;
+            rb.gravityScale = originalGravity;
+            isDashing = false;
+            yield return new WaitForSeconds(dashingCooldown);
+            canDash = true;
+
+            // Deduct mana cost
+            Mana -= ManaCost;
+            if (Mana < 0)
+            {
+                Mana = 0;
+            }
+            ManaBar.fillAmount = Mana / maxMana;
+
+            // Start mana recharge coroutine if not already started
+            if (recharge == null)
+            {
+                recharge = StartCoroutine(RechargeMana());
+            }
+        }*/
+    }
+
+    private IEnumerator RechargeMana()
+    {
+        yield return new WaitForSeconds(1f);
+
+        while (Mana < maxMana)
+        {
+            // Recharge mana
+            Mana += chargeRate / 10f;
+            if (Mana > maxMana)
+            {
+                Mana = maxMana;
+            }
+            ManaBar.fillAmount = Mana / maxMana;
+            yield return new WaitForSeconds(.1f);
+        }
+
+        // Reset recharge coroutine
+        recharge = null;
+    }
+
+
 }
