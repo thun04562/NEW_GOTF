@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowDamage : MonoBehaviour
 {
-    public int bulletDamage;
+    /*public int bulletDamage;
     public GameObject ArrowEffect;
 
 
@@ -17,5 +17,5 @@ public class ArrowDamage : MonoBehaviour
         }
         Instantiate(ArrowEffect, transform.position, transform.rotation);
         Destroy(gameObject);
-    }
+    }*/
 }

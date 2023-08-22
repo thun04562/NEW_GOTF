@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7782947684574501869}
   - component: {fileID: 7782947684574501868}
   - component: {fileID: 7782947684574501867}
-  - component: {fileID: 7782947684574501865}
+  - component: {fileID: -1723243268804856110}
   - component: {fileID: 7782947684574501862}
   m_Layer: 8
   m_Name: Slime
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7782947684574501863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.07, y: -3.4463754, z: 21.802826}
+  m_LocalPosition: {x: 21.07, y: -3.68, z: 21.802826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9322674, y: 2.4996142}
   m_EdgeRadius: 0
---- !u!114 &7782947684574501865
+--- !u!114 &-1723243268804856110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 2
-  animator: {fileID: 7782947684574501869}
+  health: 100
+  deathEffect: {fileID: 3755263068545323874, guid: 40296a4adedbda247b699a65996cdae8, type: 3}
 --- !u!114 &7782947684574501862
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -116,14 +116,24 @@ public class PlayerControl : MonoBehaviour
         }*/
 
         // Flip the player sprite based on the movement direction
-        if (dirX < 0)
+
+        if (dirX > 0.01f)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if(dirX < -0.01f)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        /* if (dirX < 0)
         {
             sprite.flipX = true;
         }
         else if (dirX > 0)
         {
             sprite.flipX = false;
-        }
+        }*/
 
         // Update the animation state
         AnimationState();
