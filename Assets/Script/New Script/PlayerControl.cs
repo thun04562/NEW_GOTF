@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
     public void CollectGem()
     {
         Debug.Log("CollectGem Worked");
-        gemCount++; 
+        gemCount += 5; 
         UpdateGemCountUI(); 
     }
 
