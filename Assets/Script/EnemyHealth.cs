@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private AudioClip EnemyDeadSound;
-    public int health = 100;
+    public int health;
+
     public GameObject deathEffect;
 
     //private int currentHealth;
@@ -15,33 +16,10 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+
     }
 
 
-    /*void Start()
-    {
-        currentHealth = health;
-        
-    }*/
-
-    /*void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            animator.SetTrigger("Dead");
-            Destroy(gameObject, 0.3f);
-            SoundManager.instance.PlaySound(EnemyDeadSound);
-        }
- 
-    }*/
-
-
-    /*public void damageEnemy(int damage)
-    {
-        currentHealth -= damage;
-
-
-    } */
 
     public void TakeDamage(int damage)
     {

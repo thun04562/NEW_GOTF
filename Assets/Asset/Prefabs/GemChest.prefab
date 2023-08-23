@@ -147,8 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6938923270328274792}
   gemPrefab: {fileID: 6738658825118093438, guid: fb5cd508982f8f84c8a6d5559441f50c, type: 3}
-  bounceForce: 7
-  numberOfGemsToSpawn: 4
+  bounceForce: 6
+  numberOfGemsToSpawn: 6
 --- !u!1 &6938923270647237107
 GameObject:
   m_ObjectHideFlags: 0

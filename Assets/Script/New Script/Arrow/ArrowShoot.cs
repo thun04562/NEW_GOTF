@@ -34,10 +34,17 @@ public class ArrowShoot : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
+        DeadExplode explodeEnemy = hitInfo.GetComponent<DeadExplode>();
+        if (explodeEnemy != null)
+        {
+            explodeEnemy.TakeDamage(damage);
+        }
+
         Instantiate(explodeEffect,transform.position,transform.rotation);
 
         Destroy(gameObject);
     }
+
 
     
 }

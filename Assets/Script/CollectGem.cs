@@ -8,7 +8,7 @@ public class CollectGem : MonoBehaviour
     public Animator animator;
     public GameObject gemPrefab;
     public float bounceForce = 10.0f;
-    public int numberOfGemsToSpawn = 3;
+    public int numberOfGemsToSpawn = 6;
 
     private int gemsCollected = 0;
 
@@ -45,7 +45,7 @@ public class CollectGem : MonoBehaviour
             Rigidbody2D gemRigidbody = gem.GetComponent<Rigidbody2D>();
 
             // Calculate a random bounce direction
-            Vector2 bounceDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(0.5f, 1f)).normalized;
+            Vector2 bounceDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(1f, 1f)).normalized;
 
             // Apply the bounce force to the gem
             gemRigidbody.AddForce(bounceDirection * bounceForce, ForceMode2D.Impulse);
@@ -58,6 +58,9 @@ public class CollectGem : MonoBehaviour
 
     private void CollectGemCallback()
     {
+
         gemsCollected++;
     }
+
+
 }

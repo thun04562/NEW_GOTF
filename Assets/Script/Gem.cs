@@ -21,13 +21,25 @@ public class Gem : MonoBehaviour
 
     private void CollectGem()
     {
+        
         // Trigger the gem collection callback
         if (collectGemCallback != null)
         {
             collectGemCallback.Invoke();
+            
+
         }
 
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
     }
+
+    IEnumerator DelayCollect()
+    {
+        //SoundManager.instance.PlaySound(hurtSound);
+        
+        yield return new WaitForSeconds(3);
+    
+    }
+
 }

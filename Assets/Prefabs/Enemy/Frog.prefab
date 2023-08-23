@@ -62,7 +62,8 @@ GameObject:
   - component: {fileID: 3101370396766741269}
   - component: {fileID: 3101370396766741258}
   - component: {fileID: 3101370396766741259}
-  - component: {fileID: 3101370396766741256}
+  - component: {fileID: 1663034732471762583}
+  - component: {fileID: 209933423264507507}
   - component: {fileID: 3101370396766741257}
   m_Layer: 8
   m_Name: Frog
@@ -79,7 +80,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3101370396766741262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.1, y: -4.4801745, z: 0}
+  m_LocalPosition: {x: 50.01, y: -4.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3101370396227249372}
@@ -158,7 +159,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3101370396766741256
+--- !u!114 &1663034732471762583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,12 +168,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3101370396766741262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93c3f6d5d2e8ad40a2bd37b8200039f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3dfd7ea27ed8f034eb33bb38b77373a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4944672803254370528, guid: 9a19d06e2aeba3445938be98b8c04c90, type: 3}
+  bulletPos: {fileID: 3101370396227249372}
+--- !u!114 &209933423264507507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101370396766741262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 3
-  animator: {fileID: 3101370396766741259}
+  health: 180
+  skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
+  smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
+  rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
+  lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
+  anim: {fileID: 0}
 --- !u!61 &3101370396766741257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,7 +205,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.12632084}
+  m_Offset: {x: -0.0000019073486, y: -0.12632084}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,5 +216,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.52, y: 2.1473584}
+  m_Size: {x: 1.8367653, y: 2.1473584}
   m_EdgeRadius: 0

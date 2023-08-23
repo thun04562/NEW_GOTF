@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Checkpoint
   - Gem
+  - Arrow
   layers:
   - Default
   - TransparentFX

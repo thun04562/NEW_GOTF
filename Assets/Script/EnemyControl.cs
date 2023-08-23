@@ -14,8 +14,10 @@ public class EnemyControl : MonoBehaviour
     [SerializeField] private float speedToPlayer = 1.0f;
     public float radius;
     private Animator anim;
-    private enum State { Fly, Dead }
+    private enum State { Idle, Attack, Run}
     private State state;
+
+
     void Start()
     {
         targetWayPoint = wayPoints[targetWayPointIndex];
@@ -25,7 +27,7 @@ public class EnemyControl : MonoBehaviour
     }
     void Update()
     {
-        //anim.SetInteger("state", (int)state);
+        anim.SetInteger("state", (int)state);
 
         float movementStep = movementSpeed * Time.deltaTime;
         float playerDistance = Vector2.Distance(player.position, transform.position);
@@ -37,17 +39,19 @@ public class EnemyControl : MonoBehaviour
         float distance = Vector3.Distance(transform.position, targetWayPoint.position); // chance target wayPoint [targetenemy -> target wayPoint]
         CheckDistanceTowayPoint(distance);
         //if (playerDistance < radius && !HealthState.gameOver && !UIState.iswinner) 
+        
+        
         if (playerDistance < radius) //TODO//
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, movementStep * speedToPlayer);
             FilppingTarget(playerToTarget);
-            state = State.Dead;  // Play animation
+            state = State.Run;  // Play animation
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position, movementStep);
             FilppingPoint(directionToTarget);
-            state = State.Fly;  // Play animation
+            state = State.Run;  // Play animation
         }
     }
     void CheckDistanceTowayPoint(float cuurenDistance)
@@ -73,6 +77,7 @@ public class EnemyControl : MonoBehaviour
             if (transform.localScale.x == 1)
             {
                 transform.localScale = new Vector3(-1, 1);
+                state = State.Run;
             }
         }
         else if (target.x < -1) // Left
@@ -80,6 +85,7 @@ public class EnemyControl : MonoBehaviour
             if (transform.localScale.x == -1)
             {
                 transform.localScale = new Vector3(1, 1);
+                state = State.Run;
             }
         }
     }
@@ -90,6 +96,7 @@ public class EnemyControl : MonoBehaviour
             if (transform.localScale.x == 1)
             {
                 transform.localScale = new Vector3(-1, 1);
+                state = State.Run;
             }
         }
         else if (targetPlayer.x < -1) // Left
@@ -97,6 +104,7 @@ public class EnemyControl : MonoBehaviour
             if (transform.localScale.x == -1)
             {
                 transform.localScale = new Vector3(1, 1);
+                state = State.Run;
             }
         }
     }

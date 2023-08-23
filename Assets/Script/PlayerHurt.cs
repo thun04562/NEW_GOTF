@@ -75,7 +75,7 @@ public class PlayerHurt : MonoBehaviour
         {
             SoundManager.instance.PlaySound(hurtSound);
             Physics2D.IgnoreLayerCollision(7, 8);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             Physics2D.IgnoreLayerCollision(7, 8, false);
         }
     }

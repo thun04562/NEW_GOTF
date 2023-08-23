@@ -40,6 +40,8 @@ public class PlayerHealthManager : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
     }
 
+    
+
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
