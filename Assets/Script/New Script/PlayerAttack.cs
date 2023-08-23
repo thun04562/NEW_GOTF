@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private AudioClip ShootSound;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -19,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Shoot()
     {
+        SoundManager.instance.PlaySound(ShootSound);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                
     }

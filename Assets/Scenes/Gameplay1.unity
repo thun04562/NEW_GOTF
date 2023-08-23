@@ -7854,8 +7854,8 @@ GameObject:
   - component: {fileID: 1140900807}
   - component: {fileID: 1140900803}
   - component: {fileID: 1140900804}
-  - component: {fileID: 1140900808}
   - component: {fileID: 1140900809}
+  - component: {fileID: 1140900808}
   - component: {fileID: 1140900802}
   - component: {fileID: 1140900806}
   - component: {fileID: 1140900800}
@@ -8181,6 +8181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce636827d646644adc6cb44b6b6c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShootSound: {fileID: 8300000, guid: 00316af64939f5040bc1b0d766124c1d, type: 3}
   firePoint: {fileID: 65905259}
   bulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
 --- !u!96 &1140900810
