@@ -392,6 +392,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27918210}
   m_CullTransparentMesh: 1
+--- !u!1 &28543043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28543044}
+  - component: {fileID: 28543045}
+  m_Layer: 0
+  m_Name: SpawnRandomChests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28543044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28543043}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 72.1, y: -0.5, z: -13.460596}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547955809}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28543045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28543043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0990015dda70b346b4bfaae3c5b03c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemChestPrefab: {fileID: 6938923270296117788}
+  numberOfChestsToSpawn: 4
+  spawnY: -3.84
+  minDistanceBetweenChests: 22
+  minAxisX: 70
+  maxAxisX: 200
 --- !u!1 &36940338
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,6 +4597,7 @@ Transform:
   - {fileID: 1555645607}
   - {fileID: 1785729684}
   - {fileID: 1120761210}
+  - {fileID: 28543044}
   - {fileID: 3188708813380855214}
   - {fileID: 478049822}
   - {fileID: 621393571}
@@ -14343,7 +14393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 400957139107044660, guid: 09b32159a1b6d994eb6259ebe39d07fb, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400957139107044660, guid: 09b32159a1b6d994eb6259ebe39d07fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16358,7 +16408,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5228330912087678877, guid: 19d0c21a05e515946a49159f662c66e1, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5228330912087678877, guid: 19d0c21a05e515946a49159f662c66e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16480,11 +16530,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5479913409145735093, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5479913409145735093, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.5
+      value: 43.4
       objectReference: {fileID: 0}
     - target: {fileID: 5479913409145735093, guid: abb083efcc818964e8153e934fdb1981, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16526,8 +16576,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GemChest
       objectReference: {fileID: 0}
+    - target: {fileID: 6938923270328274794, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+--- !u!1 &6938923270296117788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6938923270328274794, guid: abb083efcc818964e8153e934fdb1981, type: 3}
+  m_PrefabInstance: {fileID: 6938923270296117787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7674259854044551706
 PrefabInstance:
   m_ObjectHideFlags: 0
