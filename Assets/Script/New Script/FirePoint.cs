@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class FirePoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Point (Vector2 inputPointerPosition)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var platerDirection = (Vector3)inputPointerPosition - transform.position;
+        var desiredAngle = Mathf.Atan2(platerDirection.y, platerDirection.x) * Mathf.Rad2Deg;
+        var rotationStep = platerDirection *
     }
 }
