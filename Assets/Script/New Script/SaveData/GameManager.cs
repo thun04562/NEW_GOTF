@@ -1,33 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private SaveManager saveManager;
-    private PlayerData playerData;
+    public GameObject player;
+    public SaveSystem saveSystem;
 
-    private void Start()
+    private void Awake()
     {
-        saveManager = GetComponent<SaveManager>();
-        playerData = saveManager.LoadPlayerData();
+        SceneManager.sceneLoaded += Initialize;
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void LevelCompleted(int levelIndex)
+    private void Initialize(Scene scene, LoadSceneMode sceneMode)
     {
-        if (!playerData.unlockedLevels.Contains(levelIndex))
+        Debug.Log("Loaded GM");
+        var playerInput = FindObjectOfType<PlayerControl>();
+        if (playerInput != null)
+            player = playerInput.gameObject;
+        saveSystem = FindObjectOfType<SaveSystem>();
+        if (player != null && saveSystem.LoadedData != null)
         {
-            playerData.unlockedLevels.Add(levelIndex);
-            saveManager.SavePlayerData(playerData);
-        }
-    }
+            var playerHealthManager = player.GetComponent<PlayerHealthManager>();
+            //playerHealthManager.health = saveSystem.LoadedData.playerHealth;
+            
+           
 
-    public void CollectItem(int itemIndex)
-    {
-        if (!playerData.collectedItems.Contains(itemIndex))
-        {
-            playerData.collectedItems.Add(itemIndex);
-            saveManager.SavePlayerData(playerData);
         }
     }
 }

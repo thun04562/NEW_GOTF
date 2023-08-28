@@ -7,7 +7,8 @@ public class PlayerHealthManager : MonoBehaviour
 {
     //public GameObject skullBone, smallBone, rBone, lBone;
 
-    public static int health = 3;
+    //public static int health;
+    public static int health;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
