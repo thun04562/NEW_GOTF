@@ -58,10 +58,10 @@ EditorBuildSettings:
     guid: 935af003e9f9bd445aaad1008298bf90
   - enabled: 1
     path: Assets/Scenes/Gameplay2.unity
-    guid: 9720b68681ba7aa41ae960e10af90fd7
+    guid: b04e72a19db3e9747b6b622801f8fd1c
   - enabled: 1
     path: Assets/Scenes/Gameplay3.unity
-    guid: e610556e75526584ba3b794336e0a9c9
+    guid: 717f07ff28e278045ab222854e17a17e
   - enabled: 1
     path: Assets/Scenes/SkillShop.unity
     guid: b6c9c054da2092f4d96dfed1b8118e0c

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7782947684574501867}
   - component: {fileID: -1723243268804856110}
   - component: {fileID: 7782947684574501862}
-  - component: {fileID: 4956888182878987060}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Enemy
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7782947684574501863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.07, y: -3.68, z: 21.802826}
+  m_LocalPosition: {x: 21.07, y: -3.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -169,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 100
+  healthEnemy: 100
   deathEffect: {fileID: 3755263068545323874, guid: 40296a4adedbda247b699a65996cdae8, type: 3}
   anim: {fileID: 0}
 --- !u!114 &7782947684574501862
@@ -191,16 +190,3 @@ MonoBehaviour:
   movementSpeed: 3
   speedToPlayer: 1.5
   radius: 10
---- !u!114 &4956888182878987060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782947684574501863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350cf152a56297349b528e356f1cd3d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1

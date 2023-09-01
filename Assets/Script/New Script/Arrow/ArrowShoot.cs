@@ -14,6 +14,11 @@ public class ArrowShoot : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject explodeEffect;
 
+    //[SerializeField] private GameObject yellowCharge;
+    //[SerializeField] private float chargeSpeed;
+    //[SerializeField] private float chargeTime;
+
+ //   private bool isCharging;
 
     private void Start()
     {
@@ -41,15 +46,6 @@ public class ArrowShoot : MonoBehaviour
         rb.velocity = Vector2.zero;
         gameObject.SetActive(false);
     }
-
-    /*void SetDirection(float _direction)
-    {
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != _direction)
-        {
-            localScaleX = -localScaleX;
-        }
-    }*/
 
 
     private void OnTriggerEnter2D(Collider2D hitInfo)

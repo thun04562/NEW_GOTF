@@ -7,9 +7,11 @@ public class EnemyControl : MonoBehaviour
     public List<Transform> wayPoints = new List<Transform>();
     private Transform targetWayPoint;
     public Transform player;
+
     private int targetWayPointIndex;
     private int lastWayPointIndex;
     private float minDistance = 0.1f;
+
     [SerializeField] private float movementSpeed = 3.0f;
     [SerializeField] private float speedToPlayer = 1.0f;
     public float radius;

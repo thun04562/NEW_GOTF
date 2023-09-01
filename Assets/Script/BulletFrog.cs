@@ -12,7 +12,7 @@ public class BulletFrog : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            PlayerHealthManager.health--;
+            HealthHeart.playerHealth--;
 
         }
         Instantiate(ArrowEffect, transform.position, transform.rotation);

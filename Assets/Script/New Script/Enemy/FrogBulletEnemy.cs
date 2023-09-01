@@ -16,6 +16,7 @@ public class FrogBulletEnemy : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 		target = GameObject.FindObjectOfType<PlayerControl>();
+		//target = FindObjectOfType<PlayerControl>();
 		moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
 		rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
 		Destroy(gameObject, 1.5f);

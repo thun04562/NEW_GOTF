@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-    private SpriteRenderer sprite;
+    //private SpriteRenderer sprite;
     private Animator anim;
 
     public bool isFacingRight = true;
@@ -72,7 +72,7 @@ public class PlayerControl : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 

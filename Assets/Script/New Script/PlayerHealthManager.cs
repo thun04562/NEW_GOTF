@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    //public GameObject skullBone, smallBone, rBone, lBone;
+    /*//public GameObject skullBone, smallBone, rBone, lBone;
 
     //public static int health;
     public static int health;
@@ -25,7 +25,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private float startingHealth;
+   [SerializeField] private float startingHealth;
     [SerializeField] private Behaviour[] components;
 
     public float currentHealth { get; private set; }

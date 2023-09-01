@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
         saveSystem = FindObjectOfType<SaveSystem>();
         if (player != null && saveSystem.LoadedData != null)
         {
-            var playerHealthManager = player.GetComponent<PlayerHealthManager>();
-            //playerHealthManager.health = saveSystem.LoadedData.playerHealth;
+            var playerHealth = player.GetComponent<PlayerHealth>();
+            //playerHealthManage.health = saveSystem.LoadedData.playerHealth;
             
            
 

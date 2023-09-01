@@ -16,6 +16,10 @@ public class PlayerAttack : MonoBehaviour
     private Collider2D[] playerColliders;
     public float currentDelay = 0;
 
+
+
+    private bool isCharging;
+
     private void Awake()
     {
         playerColliders = GetComponentsInChildren<Collider2D>();
@@ -23,39 +27,39 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-           
         }
 
         if (canShoot == false)
         {
             currentDelay -= Time.deltaTime;
-            if(currentDelay <= 0)
+            if (currentDelay <= 0)
             {
                 canShoot = true;
             }
         }
-        
+
     }
 
     public void Shoot()
     {
         SoundManager.instance.PlaySound(ShootSound);
         //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-          if (canShoot)
+        if (canShoot)
         {
             canShoot = false;
             currentDelay = reloadDelay;
-            foreach(var fireArrow in playerArrow)
+            foreach (var fireArrow in playerArrow)
             {
                 GameObject bullet = Instantiate(bulletPrefab);
                 bullet.transform.position = fireArrow.position;
                 bullet.transform.localRotation = fireArrow.rotation;
                 bullet.GetComponent<ArrowShoot>().Initialized();
-                
-                foreach(var collider in playerColliders)
+
+                foreach (var collider in playerColliders)
                 {
                     Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
                 }
@@ -63,7 +67,8 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    
+
+}
 
 
     /*[SerializeField] private float attackCooldown;
@@ -97,5 +102,5 @@ public class PlayerAttack : MonoBehaviour
 
         //pool redarrow
     }*/
-}
+
 

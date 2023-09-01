@@ -5,31 +5,31 @@ using UnityEngine.UI;
 
 public class HealthHeart : MonoBehaviour
 {
+    public static int playerHealth = 3;
     public Sprite fullHeart, emptyHeart;
-    Image heartImage;
+    public Image[] hearts;
+    
 
     private void Awake()
     {
-        heartImage = GetComponent<Image>();
+        playerHealth = 3;
     }
 
-    public void SetHeartImage(HeartStatus status)
+    public void Update()
     {
-        switch (status)
+        foreach (Image img in hearts)
         {
-            case HeartStatus.Empty:
-                heartImage.sprite = emptyHeart;
-                break;
-            case HeartStatus.Full:
-                heartImage.sprite = fullHeart;
-                break;
+            img.sprite = emptyHeart;
         }
+        for (int i = 0; i < playerHealth; i++)
+        { 
+            hearts[i].sprite = fullHeart;
+
+        }
+        
     }
 
+    
+
 }
 
-public enum HeartStatus
-{
-    Empty = 0,
-    Full = 1
-}

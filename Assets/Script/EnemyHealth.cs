@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private AudioClip EnemyDeadSound;
-    public int health;
+    
+    public int healthEnemy;
 
     public GameObject deathEffect;
 
@@ -23,9 +24,9 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        healthEnemy -= damage;
         
-        if (health <= 0)
+        if (healthEnemy <= 0)
         {
             Die();
         }
