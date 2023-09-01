@@ -3162,7 +3162,7 @@ GameObject:
   - component: {fileID: 2013667136}
   - component: {fileID: 2013667135}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GemNumberDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3177,10 +3177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2013667134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f296849d6055d034191d144919809508, type: 3}
+  m_Script: {fileID: 11500000, guid: 0824806a856cebc4385255e4bad63b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Gameplay1
+  gemNumberText: {fileID: 127343168}
 --- !u!4 &2013667136
 Transform:
   m_ObjectHideFlags: 0
