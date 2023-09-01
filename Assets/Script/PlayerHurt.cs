@@ -15,37 +15,42 @@ public class PlayerHurt : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            HealthHeart.playerHealth--;
-            
-            if (HealthHeart.playerHealth <= 0)
-            {
-                // Play death sound
-                SoundManager.instance.PlaySound(deathSound);
+            TakeDamage();
+        }
+    }
 
-                // Spawn body parts
-                Instantiate(skullBone, transform.position, Quaternion.identity);
-                Instantiate(smallBone, transform.position, Quaternion.identity);
-                Instantiate(rBone, transform.position, Quaternion.identity);
-                Instantiate(lBone, transform.position, Quaternion.identity);
-                Instantiate(rBone, transform.position, Quaternion.identity);
-                Instantiate(lBone, transform.position, Quaternion.identity);
+    public void TakeDamage()
+    {
+        HealthHeart.playerHealth--;
+
+        if (HealthHeart.playerHealth <= 0)
+        {
+            // Play death sound
+            SoundManager.instance.PlaySound(deathSound);
+
+            // Spawn body parts
+            Instantiate(skullBone, transform.position, Quaternion.identity);
+            Instantiate(smallBone, transform.position, Quaternion.identity);
+            Instantiate(rBone, transform.position, Quaternion.identity);
+            Instantiate(lBone, transform.position, Quaternion.identity);
+            Instantiate(rBone, transform.position, Quaternion.identity);
+            Instantiate(lBone, transform.position, Quaternion.identity);
 
 
-                // Deactivate the main player GameObject
-                gameObject.SetActive(false);
+            // Deactivate the main player GameObject
+            gameObject.SetActive(false);
 
-                //isDead = true;
+            //isDead = true;
 
-                GameOverUI.isGameOver = true;
-                gameObject.SetActive(false);
-                
-            }
-            else
-            {
-                // Play hurt animation
-                animator.SetTrigger("PlayerHurt");
-                StartCoroutine(GetHurt());
-            }
+            GameOverUI.isGameOver = true;
+            gameObject.SetActive(false);
+
+        }
+        else
+        {
+            // Play hurt animation
+            animator.SetTrigger("PlayerHurt");
+            StartCoroutine(GetHurt());
         }
     }
 

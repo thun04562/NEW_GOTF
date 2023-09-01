@@ -43,8 +43,8 @@ public class MeleeAttack : MonoBehaviour
         0,Vector2.left,0, playerLayer);
         return hit.collider != null;
 
-        if(hit.collider != null) 
-            playerHealth = hit.transform.GetComponent<PlayerHurt>();
+        if (hit.collider != null) 
+        playerHealth = hit.transform.GetComponent<PlayerHurt>();
 
         return hit.collider != null;
 
@@ -60,7 +60,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (PlayerInSight())
         {
-            
+            playerHealth.TakeDamage();
         }
     }
 
