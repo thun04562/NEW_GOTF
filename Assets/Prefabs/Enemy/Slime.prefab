@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  healthEnemy: 100
+  healthEnemy: 50
   deathEffect: {fileID: 3755263068545323874, guid: 40296a4adedbda247b699a65996cdae8, type: 3}
   anim: {fileID: 0}
 --- !u!114 &7782947684574501862

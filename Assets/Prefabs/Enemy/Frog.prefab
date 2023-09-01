@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 180
+  health: 60
   skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
   smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
   rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
