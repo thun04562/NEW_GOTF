@@ -15,9 +15,12 @@ public class EnemyControl : MonoBehaviour
     [SerializeField] private float movementSpeed = 3.0f;
     [SerializeField] private float speedToPlayer = 1.0f;
     public float radius;
+
+
     private Animator anim;
     private enum State { Idle, Attack, Run}
     private State state;
+
 
 
     void Start()

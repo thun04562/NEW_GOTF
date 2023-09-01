@@ -190,3 +190,6 @@ MonoBehaviour:
   movementSpeed: 3
   speedToPlayer: 1.5
   radius: 10
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 64
