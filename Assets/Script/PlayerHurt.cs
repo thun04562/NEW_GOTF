@@ -11,10 +11,6 @@ public class PlayerHurt : MonoBehaviour
     public Animator animator;
 
 
-
-
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Enemy")
