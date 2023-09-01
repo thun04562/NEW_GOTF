@@ -2752,7 +2752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 2
+  healthEnemy: 0
   deathEffect: {fileID: 0}
   anim: {fileID: 0}
 --- !u!58 &317887827
@@ -3698,8 +3698,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootSound: {fileID: 0}
-  firePoint: {fileID: 1078696430}
+  playerArrow: []
   bulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+  reloadDelay: 1
+  canShoot: 1
+  currentDelay: 0
 --- !u!114 &375245586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3746,14 +3749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb79f537a684a943a54285dab24ab19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 722907596}
-  - {fileID: 335477264}
-  - {fileID: 1728150120}
-  fullHeart: {fileID: 21300000, guid: f4308365efbdb6841b42275ca209e43a, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 469f40b7fd55af04da019a96893aada5, type: 3}
-  startingHealth: 0
-  components: []
 --- !u!114 &375245589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3768,6 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSound: {fileID: 8300000, guid: b3adf44db6eba614a9627390647be535, type: 3}
   runSound: {fileID: 0}
+  isFacingRight: 1
   ManaBar: {fileID: 453003732}
   Mana: 100
   maxMana: 100
@@ -19329,6 +19325,7 @@ GameObject:
   - component: {fileID: 1018120317}
   - component: {fileID: 1018120316}
   - component: {fileID: 1018120315}
+  - component: {fileID: 1018120319}
   m_Layer: 0
   m_Name: '[E]'
   m_TagString: Untagged
@@ -19439,6 +19436,18 @@ Transform:
   m_Father: {fileID: 87024658}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018120319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018120314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5df44be7800d64eb685fd72ac66af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1033888024
 GameObject:
   m_ObjectHideFlags: 0
@@ -25602,7 +25611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 2
+  healthEnemy: 0
   deathEffect: {fileID: 0}
   anim: {fileID: 0}
 --- !u!58 &1890442470
