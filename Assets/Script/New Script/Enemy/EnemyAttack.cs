@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] public int damage;
-    [SerializeField] public HealthHeart _healthHeart;
+    private PlayerHurt playerHealth;
+
+    private void Awake()
+    {
+        playerHealth = FindAnyObjectByType<PlayerHurt>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if ((collision.gameObject.tag == "Player"))
         {
             Debug.Log("Enemy hit the player!");
             Damage();
-            /*PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                Debug.Log("PlayerHealthManager found on the player.");
-                playerHealth.TakeDamage(damage);
-            }*/
+            
         }
     }
 
     void Damage()
     {
-        //_healthHeart.playerHealth= _healthHeart.playerHealth - damage;
-        //_healthHeart.UpdateHealth();
-        gameObject.SetActive(false);
+        playerHealth.TakeDamage();
     }
 }
