@@ -38,12 +38,16 @@ public class PlayerControl : MonoBehaviour
     public int gemCount = 0;
 
 
-   
+
     public void CollectGem()
     {
         Debug.Log("CollectGem Worked");
-        gemCount += 5; 
-        UpdateGemCountUI(); 
+        gemCount += 5;
+        UpdateGemCountUI();
+
+        // Save gem count to PlayerPrefs
+        PlayerPrefs.SetInt("GemCount", gemCount);
+        PlayerPrefs.Save();
     }
 
     private void UpdateGemCountUI()
@@ -67,6 +71,11 @@ public class PlayerControl : MonoBehaviour
 
     private void Start()
     {
+        // Initialize gem count from PlayerPrefs or set to 0 if not found
+        gemCount = PlayerPrefs.GetInt("GemCount", 0);
+        UpdateGemCountUI();
+
+
         isFacingRight = true;
 
 
