@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerHurt player = collision.GetComponent<PlayerHurt>();
+            if (player != null)
+            {
+                player.TakeDamage();
+            }
+        }
+
+    }
+}
+
+/*
     private PlayerHurt playerHealth;
 
     private void Awake()
@@ -25,4 +40,4 @@ public class EnemyAttack : MonoBehaviour
     {
         playerHealth.TakeDamage();
     }
-}
+     */

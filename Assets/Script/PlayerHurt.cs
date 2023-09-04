@@ -40,10 +40,11 @@ public class PlayerHurt : MonoBehaviour
             // Deactivate the main player GameObject
             gameObject.SetActive(false);
 
-            //isDead = true;
-
+            //StartCoroutine(Dead());
             GameOverUI.isGameOver = true;
-            gameObject.SetActive(false);
+
+
+            //gameObject.SetActive(false);
 
         }
         else
@@ -57,13 +58,19 @@ public class PlayerHurt : MonoBehaviour
   
 
     IEnumerator GetHurt()
-        {
+    {
             SoundManager.instance.PlaySound(hurtSound);
 
             Physics2D.IgnoreLayerCollision(7, 8);
             yield return new WaitForSeconds(1);
             Physics2D.IgnoreLayerCollision(7, 8, false);
-        }
+    }
+
+    /*IEnumerator Dead()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GameOverUI.isGameOver = true;
+    }*/
 }
 
 
