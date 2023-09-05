@@ -5,18 +5,17 @@ public class GemNumberDisplay : MonoBehaviour
 {
     public Text gemNumberText;
 
-    private void Start()
+    public void UpdateGemUI()
     {
-        // Find the PlayerControl script's GameObject and get the component
-        PlayerControl playerControl = GameObject.FindWithTag("Player").GetComponent<PlayerControl>();
-
-        // Access the gemCount variable from the PlayerControl script
-        int gemCount = playerControl.gemCount;
-
-        // Optionally, display the gemCount in the UI Text component
+        int gemCount = PlayerPrefs.GetInt("GemCount");
         if (gemNumberText != null)
         {
             gemNumberText.text = gemCount.ToString();
         }
+    }
+
+    private void Start()
+    {
+        UpdateGemUI();
     }
 }

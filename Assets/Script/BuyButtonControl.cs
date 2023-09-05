@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,9 +7,16 @@ public class BuyButtonControl : MonoBehaviour
     public Button buyButton;
     private bool isSold = false;
     private string buttonStateKey;
+    private int valueGem = 0;
+    public int price = 0;
+    private int calculator = 0;
+    public GemNumberDisplay gemDisplay;
+
 
     private void Start()
     {
+        gemDisplay = FindObjectOfType<GemNumberDisplay>();
+
         // Define a unique key for each button based on its name.
         buttonStateKey = $"IsSold_{buyButton.gameObject.name}";
 
@@ -30,6 +38,19 @@ public class BuyButtonControl : MonoBehaviour
         {
             // Handle the purchase logic here.
             // You can add code to deduct money, unlock an item, etc.
+            valueGem = PlayerPrefs.GetInt("GemCount");
+            Debug.Log(valueGem);
+            Debug.Log("This Item Price "+ price.ToString());
+            calculator = valueGem - price;
+            if (calculator < 0)
+            {
+                return;
+            }
+            Debug.Log("Now, you have money "+calculator.ToString());
+
+            PlayerPrefs.SetInt("GemCount", calculator);
+            gemDisplay.UpdateGemUI();
+            Debug.Log("after gemDisplay");
 
             // Change the button text to "SOLD."
             buyButton.GetComponentInChildren<Text>().text = "SOLD";
