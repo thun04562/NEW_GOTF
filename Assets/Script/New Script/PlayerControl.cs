@@ -37,8 +37,6 @@ public class PlayerControl : MonoBehaviour
     public Text gemCountText;
     public int gemCount = 0;
 
-
-
     public void CollectGem()
     {
         Debug.Log("CollectGem Worked");
