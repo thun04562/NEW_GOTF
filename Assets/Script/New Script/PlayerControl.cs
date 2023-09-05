@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerControl : MonoBehaviour
 {
@@ -46,6 +48,7 @@ public class PlayerControl : MonoBehaviour
         // Save gem count to PlayerPrefs
         PlayerPrefs.SetInt("GemCount", gemCount);
         PlayerPrefs.Save();
+      
     }
 
     private void UpdateGemCountUI()
@@ -53,6 +56,17 @@ public class PlayerControl : MonoBehaviour
         if (gemCountText != null)
         {
             gemCountText.text = gemCount.ToString();
+        }
+    }
+
+    public void ClearGemCountIfReturningToGameplay1()
+    {
+        if (SceneManager.GetActiveScene().name == "Gameplay1")
+        {
+            
+            // Clear gem count when going back to the "Gameplay1" scene.
+            UpdateGemCountUI();
+            PlayerPrefs.DeleteAll();
         }
     }
 

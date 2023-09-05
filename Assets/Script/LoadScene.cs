@@ -10,6 +10,7 @@ public class LoadScene : MonoBehaviour
         //SoundManager.PlaySound("Button");
         SceneManager.LoadScene(SceneName);
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
     }
 
 }
