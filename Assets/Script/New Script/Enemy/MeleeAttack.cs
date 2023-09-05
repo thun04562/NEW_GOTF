@@ -6,7 +6,6 @@ public class MeleeAttack : MonoBehaviour
 {
 
 
-
     #region Public Variables
     //public Transform rayCast;
     //public LayerMask raycastMask;
@@ -21,6 +20,7 @@ public class MeleeAttack : MonoBehaviour
     [HideInInspector]public bool inRange;
     public GameObject hotZone;
     public GameObject triggerArea;
+    public bool isGround;
 
     #endregion
 
@@ -78,6 +78,15 @@ public class MeleeAttack : MonoBehaviour
         {
             EnemyLogic();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGround = true;
+        }
+        
     }
 
     /*void OnTriggerEnter2D(Collider2D trig)

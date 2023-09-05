@@ -21,21 +21,21 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: c48e8a197ddbb4040b41e42ade690a97, type: 3}
-    - time: 0.1
+    - time: 0.06666667
       value: {fileID: 21300000, guid: 0b95ff204c48ef34da9d552febac82fb, type: 3}
-    - time: 0.21666667
+    - time: 0.15
       value: {fileID: 21300000, guid: 9f9a0b9febe645848958f46831494431, type: 3}
-    - time: 0.31666666
+    - time: 0.23333333
       value: {fileID: 21300000, guid: ceb532480118bb14396e4c9abf5f1630, type: 3}
-    - time: 0.43333334
+    - time: 0.31666666
       value: {fileID: 21300000, guid: f39cff0ec447138408274e3e10a2cd73, type: 3}
-    - time: 0.53333336
+    - time: 0.38333333
       value: {fileID: 21300000, guid: 1d47bfbc6c8847f41a1e1f38143eeff7, type: 3}
-    - time: 0.65
+    - time: 0.48333332
       value: {fileID: 21300000, guid: fcaf41b88dbe9d9429bffd5a30093cf6, type: 3}
-    - time: 0.75
-      value: {fileID: 21300000, guid: 040fd062b54fb0545a9ace08c44f8c08, type: 3}
-    - time: 0.8333333
+    - time: 0.56666666
+      value: {fileID: 21300000, guid: fcaf41b88dbe9d9429bffd5a30093cf6, type: 3}
+    - time: 0.65
       value: {fileID: 21300000, guid: 040fd062b54fb0545a9ace08c44f8c08, type: 3}
     attribute: m_Sprite
     path: 
@@ -63,14 +63,14 @@ AnimationClip:
     - {fileID: 21300000, guid: f39cff0ec447138408274e3e10a2cd73, type: 3}
     - {fileID: 21300000, guid: 1d47bfbc6c8847f41a1e1f38143eeff7, type: 3}
     - {fileID: 21300000, guid: fcaf41b88dbe9d9429bffd5a30093cf6, type: 3}
-    - {fileID: 21300000, guid: 040fd062b54fb0545a9ace08c44f8c08, type: 3}
+    - {fileID: 21300000, guid: fcaf41b88dbe9d9429bffd5a30093cf6, type: 3}
     - {fileID: 21300000, guid: 040fd062b54fb0545a9ace08c44f8c08, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.84999996
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -89,4 +89,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.48333332
+    functionName: frogShooting
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

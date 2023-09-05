@@ -96,8 +96,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191305338830173597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.53, y: -0.62, z: 0}
-  m_LocalScale: {x: 6.800327, y: 2.0556037, z: 0.90622073}
+  m_LocalPosition: {x: 2.08, y: -0.62, z: 0}
+  m_LocalScale: {x: 9.690465, y: 2.0556037, z: 0.90622073}
   m_Children: []
   m_Father: {fileID: 6780717988998997358}
   m_RootOrder: 1
@@ -181,10 +181,10 @@ GameObject:
   - component: {fileID: 6780717988998997358}
   - component: {fileID: 6780717988998997353}
   - component: {fileID: 6780717988998997352}
-  - component: {fileID: 7754190065394619336}
-  - component: {fileID: 1587285187437642477}
   - component: {fileID: -1124513232243673468}
   - component: {fileID: 1992803281339689098}
+  - component: {fileID: 7754190065394619336}
+  - component: {fileID: 1587285187437642477}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Enemy
@@ -282,46 +282,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7754190065394619336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780717988998997355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8238f607ced3ec24eb8dafb20394af7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDistance: 1.6
-  moveSpeed: 4
-  timer: 1
-  leftLimit: {fileID: 0}
-  rightLimit: {fileID: 0}
-  target: {fileID: 0}
-  inRange: 0
-  hotZone: {fileID: 7271060593907681187}
-  triggerArea: {fileID: 5191305338830173597}
---- !u!114 &1587285187437642477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780717988998997355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyDeadSound: {fileID: 0}
-  health: 160
-  skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
-  smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
-  rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
-  lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
-  anim: {fileID: 6780717988998997352}
 --- !u!50 &-1124513232243673468
 Rigidbody2D:
   serializedVersion: 4
@@ -337,7 +297,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 500
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 0
@@ -369,6 +329,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2661362, y: 3.0130088}
   m_EdgeRadius: 0
+--- !u!114 &7754190065394619336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780717988998997355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8238f607ced3ec24eb8dafb20394af7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDistance: 1.6
+  moveSpeed: 4
+  timer: 1
+  leftLimit: {fileID: 0}
+  rightLimit: {fileID: 0}
+  target: {fileID: 0}
+  inRange: 0
+  hotZone: {fileID: 7271060593907681187}
+  triggerArea: {fileID: 5191305338830173597}
+  isGround: 0
+--- !u!114 &1587285187437642477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780717988998997355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyDeadSound: {fileID: 0}
+  health: 160
+  skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
+  smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
+  rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
+  lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
+  anim: {fileID: 6780717988998997352}
 --- !u!1 &7271060593907681187
 GameObject:
   m_ObjectHideFlags: 0
