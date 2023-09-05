@@ -8,8 +8,7 @@ public class OpenShop : MonoBehaviour
     private bool playerInRange = false;
     private SpriteRenderer spriteRenderer;
     private string currentSceneName; // To store the name of the current scene
-
-
+    public PlayerControl playerControl;
 
     private void Start()
     {
@@ -59,8 +58,12 @@ public class OpenShop : MonoBehaviour
         {
             // Unload the "SkillShop" scene if it's loaded and we are not in the "SkillShop" scene
             Scene skillShopScene = SceneManager.GetSceneByName("SkillShop");
+            playerControl = FindObjectOfType<PlayerControl>();
             if (skillShopScene.isLoaded)
             {
+                Debug.Log("Before Close Shop and Update");
+                playerControl.UpdateGemCountUI();
+                Debug.Log("After Close Shop and Update");
                 SceneManager.UnloadScene("SkillShop");
                 Time.timeScale = 1f;
             }
