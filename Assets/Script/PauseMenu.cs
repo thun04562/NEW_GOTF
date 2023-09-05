@@ -14,33 +14,22 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            /*if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }*/
-
             if (pauseMenuUI.activeInHierarchy)
                 Pause(false);
             else
                 Pause(true);
         }
     }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
+
     void Pause(bool status)
     {
-        /*pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;*/
-
         pauseMenuUI.SetActive(status);
 
         if (status)
@@ -48,27 +37,20 @@ public class PauseMenu : MonoBehaviour
         else
             Time.timeScale = 1;
     }
+
     public void MainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void Restert1()
+    public void ReturnToGameplayScene()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Gameplay1");
-    }
+        // Call ClearGemCountIfReturningToGameplay1 before restarting the scene.
+        FindObjectOfType<PlayerControl>().ClearGemCountIfReturningToGameplay1();
 
-    public void Restert2()
-    {
+        // This method returns to the gameplay scene specified in the SceneName variable.
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Gameplay2");
-    }
-
-    public void Restert3()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Gameplay3");
+        SceneManager.LoadScene(SceneName);
     }
 }
