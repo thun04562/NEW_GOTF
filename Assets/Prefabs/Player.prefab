@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 7324860671845152778}
   - component: {fileID: 7324860671845152780}
   - component: {fileID: 7324860671845152772}
+  - component: {fileID: 5968530735144619628}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -474,3 +475,20 @@ MonoBehaviour:
   reloadDelay: 0.5
   canShoot: 1
   currentDelay: 0
+--- !u!114 &5968530735144619628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324860671845152881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb2aab625259914b9386cca954ff6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 7324860671845152783}
+  redArrowOverride: {fileID: 0}
+  greenArrowOverride: {fileID: 0}
+  blueArrowOverride: {fileID: 0}
+  yellowArrowOverride: {fileID: 0}

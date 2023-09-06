@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GreenArrowOverride
+  m_Controller: {fileID: 9100000, guid: e8b59fd4e9b0e6c4186d589cf0fa5384, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 88d261b52c2f3c046807a84ff52d1723, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b6ac280776b9a474d87315a4911017da, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a566db0c1e6bb7e4b8059a355d31e853, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f96e8fec1d9ddcc4d879235bd3eed3d6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 27e7380812e28564cb0137257cf8d994, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6f77a571ed216264ead9ffc588b248cd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 923d813df5935c94e9e6116f11c3f5d9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ac00c686d2f8a0743949e02e8c0b6023, type: 2}
