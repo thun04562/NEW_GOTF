@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1408490224442201804}
   - component: {fileID: 1408490224442201807}
-  - component: {fileID: 1408490224442201805}
   - component: {fileID: -9210066928316727442}
+  - component: {fileID: 725079785321847207}
   m_Layer: 0
   m_Name: 2-wood
   m_TagString: Untagged
@@ -84,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1408490224442201805
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408490224442201806}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018679619, y: -0.018680096}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.3333335, y: 1.4777777}
-    newSize: {x: 7.8, y: 2.66}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.1387005, y: 1.2029524}
-  m_EdgeRadius: 0
 --- !u!114 &-9210066928316727442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +98,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
+--- !u!68 &725079785321847207
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408490224442201806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.0208433, y: -0.5913739}
+  - {x: -2.1201644, y: -0.2774987}
+  - {x: -2.155921, y: 0.04672444}
+  - {x: -2.0965705, y: 0.29539517}
+  - {x: -1.7916199, y: 0.5997187}
+  - {x: -1.043734, y: 0.35282263}
+  - {x: 0.66033024, y: 0.14739783}
+  - {x: 0.4820518, y: 0.565026}
+  - {x: 0.61561954, y: 0.6918921}
+  - {x: 1.0563418, y: 0.16973308}
+  - {x: 1.3916705, y: 0.12537485}
+  - {x: 1.9228557, y: 0.20089127}
+  - {x: 2.04623, y: 0.099236794}
+  - {x: 2.1007998, y: -0.14726923}
+  - {x: 2.1343458, y: -0.4533394}
+  - {x: 2.0350494, y: -0.6642831}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

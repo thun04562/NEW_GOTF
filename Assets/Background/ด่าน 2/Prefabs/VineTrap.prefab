@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8646751841041244947}
   - component: {fileID: 8646751841041244956}
-  - component: {fileID: 8646751841041244946}
-  - component: {fileID: -5944592580305858544}
+  - component: {fileID: 5459301569283391867}
+  - component: {fileID: 2176447462603274299}
   m_Layer: 0
   m_Name: VineTrap
   m_TagString: Untagged
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8646751841041244946
-BoxCollider2D:
+--- !u!68 &5459301569283391867
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,20 +97,29 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07514572, y: -0.37098694}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.77, y: 3.68}
-    newSize: {x: 5.77, y: 3.68}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.0523148, y: 2.9380264}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!114 &-5944592580305858544
+  m_Points:
+  - {x: -0.379133, y: -1.8877552}
+  - {x: -0.6588135, y: -1.1236768}
+  - {x: -2.28553, y: -0.89787626}
+  - {x: -2.695221, y: -0.39459205}
+  - {x: -2.6425629, y: 0.17261434}
+  - {x: -2.8070755, y: 0.45793104}
+  - {x: -2.6613464, y: 1.8209316}
+  - {x: -2.3822327, y: 1.5468996}
+  - {x: -2.4122162, y: 0.6879331}
+  - {x: -1.5494461, y: 1.1732845}
+  - {x: -0.4972, y: 1.5687081}
+  - {x: -0.9170685, y: 0.64909244}
+  - {x: 0.7215729, y: 0.34071326}
+  - {x: 0.9825134, y: -0.5902209}
+  - {x: 2.8682992, y: -1.8209319}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &2176447462603274299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +128,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8646751841041244957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 482706f408d3fcd4080f0d6d9801ba32, type: 3}
+  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  deathEffect: {fileID: 0}
+  EnemyDeadSound: {fileID: 0}
+  health: 50
+  skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
+  smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
+  rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
+  lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
+  anim: {fileID: 0}

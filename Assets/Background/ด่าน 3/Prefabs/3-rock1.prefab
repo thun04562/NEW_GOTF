@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 256579791607021486}
   - component: {fileID: 256579791607021487}
-  - component: {fileID: 256579791607021485}
-  - component: {fileID: 256579791607020627}
-  - component: {fileID: 256579791607021484}
+  - component: {fileID: 3483866738041218020}
+  - component: {fileID: 5476058230934854037}
   m_Layer: 6
   m_Name: 3-rock1
   m_TagString: Untagged
@@ -85,8 +84,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &256579791607021485
-CapsuleCollider2D:
+--- !u!68 &3483866738041218020
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,38 +97,44 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20919633, y: -0.042672276}
-  m_Size: {x: 1.2633443, y: 1.9462259}
-  m_Direction: 0
---- !u!70 &256579791607020627
-CapsuleCollider2D:
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.7493948, y: -0.95717645}
+  - {x: -1.7037014, y: 0.009438649}
+  - {x: -1.5566278, y: 0.29063597}
+  - {x: -1.2527442, y: 0.57461}
+  - {x: -0.87665063, y: 0.18116428}
+  - {x: -0.5968831, y: 0.8779502}
+  - {x: -0.14914325, y: 1.0527989}
+  - {x: 0.19236958, y: 0.92233336}
+  - {x: 0.45516494, y: 0.18229404}
+  - {x: 0.8460641, y: 0.37666023}
+  - {x: 1.2296313, y: 0.107617125}
+  - {x: 1.4311031, y: -0.4459629}
+  - {x: 1.597304, y: -0.43182272}
+  - {x: 1.7421116, y: -0.742587}
+  - {x: 1.7498356, y: -0.9158429}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &5476058230934854037
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256579791607021480}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.1920404, y: -0.27929425}
-  m_Size: {x: 0.7519846, y: 1.4729819}
-  m_Direction: 0
---- !u!70 &256579791607021484
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256579791607021480}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.8177829, y: -0.31588674}
-  m_Size: {x: 0.98433304, y: 1.2386851}
-  m_Direction: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyDeadSound: {fileID: 0}
+  health: 50
+  skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
+  smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
+  rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
+  lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
+  anim: {fileID: 0}
