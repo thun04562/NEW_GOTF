@@ -42,7 +42,7 @@ public class PlayerControl : MonoBehaviour
     public void CollectGem()
     {
         Debug.Log("CollectGem Worked");
-        gemCount += 5;
+        gemCount += 10;
         PlayerPrefs.SetInt("GemCount", gemCount);
         UpdateGemCountUI();
         PlayerPrefs.Save();

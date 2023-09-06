@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 83772578}
   - component: {fileID: 83772577}
   m_Layer: 5
-  m_Name: WeaponPrice
+  m_Name: WeaponPriceGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,7 +1059,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 750
+  m_Text: 700
 --- !u!222 &523744619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyButton: {fileID: 608335409}
-  price: 750
+  price: 700
   gemDisplay: {fileID: 2013667135}
 --- !u!114 &608335409
 MonoBehaviour:
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyButton: {fileID: 1113626143}
-  price: 300
+  price: 150
   gemDisplay: {fileID: 2013667135}
 --- !u!114 &1113626145
 MonoBehaviour:
@@ -2368,7 +2368,7 @@ GameObject:
   - component: {fileID: 1134454906}
   - component: {fileID: 1134454905}
   m_Layer: 5
-  m_Name: WeaponPrice (1)
+  m_Name: WeaponPriceBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3262,7 +3262,7 @@ GameObject:
   - component: {fileID: 1934264977}
   - component: {fileID: 1934264976}
   m_Layer: 5
-  m_Name: WeaponPrice (2)
+  m_Name: WeaponPriceYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3476,7 +3476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 300
+  m_Text: 150
 --- !u!222 &1951850838
 CanvasRenderer:
   m_ObjectHideFlags: 0
