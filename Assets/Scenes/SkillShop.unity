@@ -839,7 +839,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Ability : Shooting 1 arrows at once
 
-    Firing range : Long'
+    Firing range : Shot'
 --- !u!222 &409159143
 CanvasRenderer:
   m_ObjectHideFlags: 0

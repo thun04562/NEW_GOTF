@@ -20810,6 +20810,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: redArrowOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: d05d6e4b76dd1874c98fb6759e211963, type: 2}
+    - target: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: blueArrowOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: 8365c57c2275fbb4da960180475fd1ba, type: 2}
+    - target: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: greenArrowOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: fae5e576fd8d3b94f9d7928b92b0cfe0, type: 2}
+    - target: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: yellowArrowOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: 5da8b6af77e511c4b95fc497a07e4e5b, type: 2}
     - target: {fileID: 7324860671845152778, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: ManaBar
       value: 
@@ -20873,6 +20889,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7324860671845152883, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
   m_PrefabInstance: {fileID: 1282861670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282861672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+  m_PrefabInstance: {fileID: 1282861670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb2aab625259914b9386cca954ff6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1286254136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5705870958073903966, guid: 66bd77fa4907c8f4a8b10e7aae093da0, type: 3}
@@ -25430,7 +25457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: E
+  m_Text: R
 --- !u!222 &1869901915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25838,6 +25865,7 @@ GameObject:
   - component: {fileID: 1964159391}
   - component: {fileID: 1964159393}
   - component: {fileID: 1964159392}
+  - component: {fileID: 1964159394}
   m_Layer: 5
   m_Name: WeaponUI
   m_TagString: Untagged
@@ -25904,6 +25932,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964159390}
   m_CullTransparentMesh: 1
+--- !u!114 &1964159394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964159390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5055534345408dd43abe513a7ca91b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponSwapSound: {fileID: 8300000, guid: ecd9dd76ee9e1434da775c92416e375c, type: 3}
+  arrowUIImage: {fileID: 1182849024}
+  arrowSprites:
+  - {fileID: 21300000, guid: ac7b5452e0eb4d048b510963877bb225, type: 3}
+  - {fileID: 21300000, guid: 69d4d6946e8dfed499bae97bdafb0675, type: 3}
+  - {fileID: 21300000, guid: 6bfe3bb0197b84343a8ae22c1e756727, type: 3}
+  - {fileID: 21300000, guid: 4c6dc2e1cbc0786429663299539ef8a9, type: 3}
+  playerAnimationController: {fileID: 1282861672}
 --- !u!4 &1988388170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2165686945028610185, guid: 2d9a29d191d7d75409b0eb9d2bc09dd4, type: 3}
