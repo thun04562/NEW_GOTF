@@ -8,4 +8,14 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: BlueArrowOverride
   m_Controller: {fileID: 9100000, guid: e8b59fd4e9b0e6c4186d589cf0fa5384, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 27e7380812e28564cb0137257cf8d994, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 19b860ba94b59134aafedc87d43e00d7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 923d813df5935c94e9e6116f11c3f5d9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 00038b31c31abc5409ff5b710633c338, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fd10156c601fd5240bb3cdf996efe324, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f92e98c4a56b22f4b9eb35ea5d3d7cfd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 88d261b52c2f3c046807a84ff52d1723, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 591a4705c43e07342986fa7fb043529a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a566db0c1e6bb7e4b8059a355d31e853, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a76bf8e01888dda4591dfc3a6dab006e, type: 2}
