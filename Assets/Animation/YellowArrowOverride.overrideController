@@ -8,4 +8,12 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: YellowArrowOverride
   m_Controller: {fileID: 9100000, guid: e8b59fd4e9b0e6c4186d589cf0fa5384, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 27e7380812e28564cb0137257cf8d994, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c66f7ff4f55671443a04cdd495b36eb4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 923d813df5935c94e9e6116f11c3f5d9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d15f58330e8db114b8f22917e5a72774, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a566db0c1e6bb7e4b8059a355d31e853, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 424ceca54a139454db69c9b3dd471ae4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fd10156c601fd5240bb3cdf996efe324, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 84f47465bba24e941ba3cb120f73d385, type: 2}
