@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8244441540787298531}
   - component: {fileID: 8244441540787298540}
   - component: {fileID: 8244441540787298541}
-  - component: {fileID: 8244441540787298542}
-  - component: {fileID: 8244441540787298543}
+  - component: {fileID: 1943944663859883237}
+  - component: {fileID: 5583229171116850047}
+  - component: {fileID: 8762455728284254900}
   m_Layer: 8
   m_Name: '[Boss]RedOrge'
   m_TagString: Enemy
@@ -126,9 +127,9 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &8244441540787298541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,39 +143,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.33146763, y: -3.3305092}
+  m_Offset: {x: -0.33146763, y: -3.5906255}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 33.089622, y: 14.064706}
+    oldSize: {x: 33.08235, y: 14.064706}
     newSize: {x: 15.94, y: 13.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.386755, y: 7.0726852}
+  m_Size: {x: 4.386755, y: 6.968639}
   m_EdgeRadius: 0
---- !u!114 &8244441540787298542
+--- !u!114 &1943944663859883237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8244441540787298536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf963b62b0feac049b4dc99478914a18, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e7e8bde7ffd8ee40813c626a4ebb72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  player: {fileID: 8244441540787298529}
-  movementSpeed: 3
-  speedToPlayer: 1.5
-  radius: 10
---- !u!114 &8244441540787298543
+--- !u!114 &5583229171116850047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,13 +177,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 8244441540787298536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e427b0a56bd830140b7909e6e028aa2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 380554bcb3786ba4792424dcd517fdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 250
   skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
   smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
   rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
   lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
   anim: {fileID: 8244441540787298531}
+  healthBar: {fileID: 0}
+  health: 600
+  isInvulnerable: 0
+--- !u!114 &8762455728284254900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244441540787298536}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e86e85d5a8d3e498efcdfb22eb07ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
