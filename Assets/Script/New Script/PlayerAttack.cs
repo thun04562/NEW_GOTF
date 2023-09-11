@@ -6,16 +6,15 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private AudioClip ShootSound;
 
     public List<Transform> playerArrow;
-    public GameObject bulletPrefab;
+    public GameObject greenArrowBulletPrefab;
+    public GameObject blueArrowBulletPrefab;
+    public GameObject yellowArrowBulletPrefab;
+    public GameObject redArrowBulletPrefab; // Add a reference to the red arrow bullet prefab.
     public float reloadDelay = 1;
-
-    //public Transform firePoint;
 
     public bool canShoot = true;
     private Collider2D[] playerColliders;
-    public float currentDelay = 0;
-
-
+    private float currentDelay = 0;
 
     private bool isCharging;
 
@@ -31,6 +30,12 @@ public class PlayerAttack : MonoBehaviour
             Shoot();
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Call a method to switch the bullet prefab and update the UI.
+            SwitchBulletPrefab();
+        }
+
         if (canShoot == false)
         {
             currentDelay -= Time.deltaTime;
@@ -39,31 +44,62 @@ public class PlayerAttack : MonoBehaviour
                 canShoot = true;
             }
         }
-
     }
 
     public void Shoot()
     {
-        //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         if (canShoot)
         {
             canShoot = false;
             currentDelay = reloadDelay;
             foreach (var fireArrow in playerArrow)
             {
-                GameObject bullet = Instantiate(bulletPrefab);
-                bullet.transform.position = fireArrow.position;
-                bullet.transform.localRotation = fireArrow.rotation;
-                bullet.GetComponent<ArrowShoot>().Initialized();
-
-                foreach (var collider in playerColliders)
+                GameObject bulletPrefab = GetCurrentBulletPrefab(); // Get the correct bullet prefab.
+                if (bulletPrefab != null)
                 {
-                    Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
-                    SoundManager.instance.PlaySound(ShootSound);
+                    GameObject bullet = Instantiate(bulletPrefab);
+                    bullet.transform.position = fireArrow.position;
+                    bullet.transform.localRotation = fireArrow.rotation;
+                    bullet.GetComponent<ArrowShoot>().Initialized();
+
+                    foreach (var collider in playerColliders)
+                    {
+                        Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), collider);
+                        SoundManager.instance.PlaySound(ShootSound);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Invalid arrow type on the arrow: " + fireArrow.name);
                 }
             }
         }
     }
 
+    private GameObject GetCurrentBulletPrefab()
+    {
+        // Determine the appropriate bullet prefab based on the current arrow type.
+        string currentArrowType = GetComponent<PlayerAnimationArrowController>().GetCurrentArrowType();
 
+        switch (currentArrowType)
+        {
+            case "RedArrow":
+                return redArrowBulletPrefab;
+            case "GreenArrow":
+                return greenArrowBulletPrefab;
+            case "BlueArrow":
+                return blueArrowBulletPrefab;
+            case "YellowArrow":
+                return yellowArrowBulletPrefab;
+            default:
+                Debug.LogError("Invalid arrow type: " + currentArrowType);
+                return null;
+        }
+    }
+
+    // Method to switch the bullet prefab and update the UI (called when pressing "R").
+    private void SwitchBulletPrefab()
+    {
+        GetComponent<PlayerAnimationArrowController>().ChangeArrowAnimation("GreenArrow"); // Change arrow type to green.
+    }
 }

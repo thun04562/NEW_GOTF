@@ -9,6 +9,7 @@ public class PlayerAnimationArrowController : MonoBehaviour
     public AnimatorOverrideController yellowArrowOverride;
 
     private AnimatorOverrideController currentOverrideController;
+    private string currentArrowType = "RedArrow"; // Initial arrow type.
 
     private void Start()
     {
@@ -49,5 +50,13 @@ public class PlayerAnimationArrowController : MonoBehaviour
 
         // Apply the selected Animator Override Controller.
         playerAnimator.runtimeAnimatorController = currentOverrideController;
+
+        // Update the current arrow type.
+        currentArrowType = arrowType;
+    }
+
+    public string GetCurrentArrowType()
+    {
+        return currentArrowType;
     }
 }

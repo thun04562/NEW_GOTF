@@ -11,7 +11,7 @@ public class BuyButtonControl : MonoBehaviour
     public int price = 0;
     private int calculator = 0;
     public GemNumberDisplay gemDisplay;
-
+    private SkillUnlock skillUnlock; // Reference to the SkillUnlock component.
 
     private void Start()
     {
@@ -40,13 +40,13 @@ public class BuyButtonControl : MonoBehaviour
             // You can add code to deduct money, unlock an item, etc.
             valueGem = PlayerPrefs.GetInt("GemCount");
             Debug.Log(valueGem);
-            Debug.Log("This Item Price "+ price.ToString());
+            Debug.Log("This Item Price " + price.ToString());
             calculator = valueGem - price;
             if (calculator < 0)
             {
                 return;
             }
-            Debug.Log("Now, you have money "+calculator.ToString());
+            Debug.Log("Now, you have money " + calculator.ToString());
 
             PlayerPrefs.SetInt("GemCount", calculator);
             gemDisplay.UpdateGemUI();
@@ -63,6 +63,12 @@ public class BuyButtonControl : MonoBehaviour
 
             // Save the button state to PlayerPrefs.
             PlayerPrefs.SetInt(buttonStateKey, 1);
+
+            // Unlock the skill by setting its SkillUnlock component to true.
+            if (skillUnlock != null)
+            {
+                skillUnlock.isUnlocked = true;
+            }
         }
     }
 
