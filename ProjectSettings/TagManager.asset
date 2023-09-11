@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - Gem
   - Arrow
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Object
   - Arrow
   - Hit
-  - 
+  - Fire
   - 
   - 
   - 

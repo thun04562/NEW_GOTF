@@ -40,25 +40,22 @@ public class Boss : MonoBehaviour
     private void Update()
     {
         hpSlider.value = currentHP;
-
         timeInCurrentState += Time.deltaTime;
-
-       
 
         switch (currentState)
         {
             case BossState.Idle:
-                // Handle transitions to other states if conditions are met
                 if (currentHP <= 0)
                 {
                     Die();
+                    Debug.Log("dead");
                 }
-                else if (currentHP <= 350)
+                else if (currentHP <= 450)
                 {
                     currentState = BossState.IdleRed;
                     timeInCurrentState = 0f;
                 }
-                else if (timeInCurrentState >= fireballSummonInterval *2f)
+                else if (timeInCurrentState >= fireballSummonInterval * 2f)
                 {
                     currentState = BossState.AttackIdle;
                     timeInCurrentState = 0f;
@@ -66,17 +63,16 @@ public class Boss : MonoBehaviour
                 break;
 
             case BossState.AttackIdle:
-                // Handle transitions to other states if conditions are met
                 if (currentHP <= 0)
                 {
                     Die();
+                    Debug.Log("dead");
                 }
-                else if (currentHP <= 350)
+                else if (currentHP <= 450)
                 {
                     currentState = BossState.IdleRed;
                     timeInCurrentState = 0f;
                 }
-
                 else if (timeInCurrentState >= fireballSummonDuration * 5f)
                 {
                     currentState = BossState.Idle;
@@ -85,57 +81,52 @@ public class Boss : MonoBehaviour
                 else if (Time.time >= nextFireballSummonTime)
                 {
                     SummonFireball();
-
                     nextFireballSummonTime = Time.time + fireballSummonInterval;
                 }
                 break;
 
             case BossState.IdleRed:
-                // Handle transitions to other states if conditions are met
                 if (currentHP <= 0)
                 {
                     Die();
+                    Debug.Log("dead");
                 }
+               
                 else if (timeInCurrentState >= fireballSummonInterval * 2f) // Increase the interval
                 {
-                    currentState = BossState.AttackIdle;
+                    currentState = BossState.IdleInEnraged;
                     timeInCurrentState = 0f;
                 }
+
+       
                 break;
 
-                
-
             case BossState.IdleInEnraged:
-                // Handle transitions to other states if conditions are met
                 if (currentHP <= 0)
                 {
-
                     Die();
+                    Debug.Log("dead");
                 }
-                else if (Time.time >= nextFireballSummonTime * 5f)
+                else if (timeInCurrentState >= fireballSummonDuration * 4f)
+                {
+
+                    currentState = BossState.IdleRed;
+                    timeInCurrentState = 0f;
+                }
+                else if (Time.time >= nextFireballSummonTime)
                 {
                     SummonFireball();
                     nextFireballSummonTime = Time.time + fireballSummonInterval;
                 }
                 break;
+
+  
         }
 
         // Update the boss's animation based on the current state
         UpdateAnimation();
     }
 
-    /*private void SummonFireball()
-    {
-        // Check if the boss is in AttackIdle or IdleInEnraged state before summoning fireball
-        if (currentState == BossState.AttackIdle || currentState == BossState.IdleInEnraged)
-        {
-            float X = Random.Range(minX, maxY);
-            float Y = Random.Range(minY, maxY);
-            Instantiate(fireballPrefab, transform.position + new Vector3(X, Y, 0), transform.rotation);
-        }
-        
-        //Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
-    }*/
 
     private void SummonFireball()
     {
@@ -146,7 +137,7 @@ public class Boss : MonoBehaviour
             AnimatorStateInfo currentAnimation = anim.GetCurrentAnimatorStateInfo(0);
 
             // Check if the animation state is AttackIdle or IdleInEnraged
-            if (currentAnimation.IsName("Attack-Idle") || currentAnimation.IsName("IdleInEnraged"))
+            if (currentAnimation.IsName("Attack-Idle") || currentAnimation.IsName("idleInEnraged"))
             {
                 float X = Random.Range(minX, maxY);
                 float Y = Random.Range(minY, maxY);

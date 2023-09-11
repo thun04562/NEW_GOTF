@@ -17,6 +17,10 @@ public class PlayerHurt : MonoBehaviour
         {
             TakeDamage();
         }
+        if (collision.transform.tag == "Fire")
+        {
+            TakeDamage();
+        }
     }
 
     public void TakeDamage()

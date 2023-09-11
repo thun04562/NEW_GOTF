@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5083238777886905754}
   - component: {fileID: 8321320290755619461}
   - component: {fileID: 1355428683389522420}
-  m_Layer: 8
+  m_Layer: 16
   m_Name: FireBall
-  m_TagString: Enemy
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
