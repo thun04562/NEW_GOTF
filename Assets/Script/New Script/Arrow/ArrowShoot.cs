@@ -63,6 +63,12 @@ public class ArrowShoot : MonoBehaviour
             explodeEnemy.TakeDamage(damage);
         }
 
+        Boss boss = hitInfo.GetComponent<Boss>();
+        if (boss != null)
+        {
+            boss.TakeDamage(damage);
+        }
+
         Instantiate(explodeEffect,transform.position,transform.rotation);
 
         Destroy(gameObject);

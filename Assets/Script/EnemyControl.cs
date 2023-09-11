@@ -36,7 +36,7 @@ public class EnemyControl : MonoBehaviour
         {
 
 
-            anim.SetInteger("state", (int)state);
+            //anim.SetInteger("state", (int)state);
 
             float movementStep = movementSpeed * Time.deltaTime;
             float playerDistance = Vector2.Distance(player.position, transform.position);

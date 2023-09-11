@@ -453,8 +453,8 @@ MonoBehaviour:
   smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
   rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
   lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
-  hurtSound: {fileID: 0}
-  deathSound: {fileID: 0}
+  hurtSound: {fileID: 8300000, guid: 227892ecfcbb2d140a07400a53d59dba, type: 3}
+  deathSound: {fileID: 8300000, guid: 1fff8362b7bb1f94e8398a5cd6e6ed46, type: 3}
   animator: {fileID: 7324860671845152783}
 --- !u!114 &7324860671845152772
 MonoBehaviour:
@@ -471,10 +471,12 @@ MonoBehaviour:
   ShootSound: {fileID: 8300000, guid: 00316af64939f5040bc1b0d766124c1d, type: 3}
   playerArrow:
   - {fileID: 7324860670684584358}
-  bulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+  greenArrowBulletPrefab: {fileID: 8200781156134895229, guid: 508a316828ca2924cbd1a080d9b16421, type: 3}
+  blueArrowBulletPrefab: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
+  yellowArrowBulletPrefab: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
+  redArrowBulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
   reloadDelay: 0.5
   canShoot: 1
-  currentDelay: 0
 --- !u!114 &5968530735144619628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 7324860671845152783}
-  redArrowOverride: {fileID: 0}
-  greenArrowOverride: {fileID: 0}
-  blueArrowOverride: {fileID: 0}
-  yellowArrowOverride: {fileID: 0}
+  redArrowOverride: {fileID: 22100000, guid: d05d6e4b76dd1874c98fb6759e211963, type: 2}
+  greenArrowOverride: {fileID: 22100000, guid: fae5e576fd8d3b94f9d7928b92b0cfe0, type: 2}
+  blueArrowOverride: {fileID: 22100000, guid: 8365c57c2275fbb4da960180475fd1ba, type: 2}
+  yellowArrowOverride: {fileID: 22100000, guid: 5da8b6af77e511c4b95fc497a07e4e5b, type: 2}
