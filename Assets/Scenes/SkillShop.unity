@@ -150,14 +150,14 @@ RectTransform:
   m_GameObject: {fileID: 16011753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13416304, y: 0.5337158, z: 0.47484025}
+  m_LocalScale: {x: 0.13416305, y: 0.5337157, z: 0.47484025}
   m_Children: []
   m_Father: {fileID: 1281875780}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6702881, y: -0.06854248}
+  m_AnchoredPosition: {x: 0.6702881, y: 0.2744751}
   m_SizeDelta: {x: 833, y: 193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16011755
@@ -461,14 +461,14 @@ RectTransform:
   m_GameObject: {fileID: 377458991}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75327593, y: 0.7805593, z: 0.69445384}
+  m_LocalScale: {x: 0.75327593, y: 0.78055924, z: 0.69445384}
   m_Children: []
   m_Father: {fileID: 1281875780}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0107422, y: -2.0202026}
+  m_AnchoredPosition: {x: -2.0107422, y: -1.6772156}
   m_SizeDelta: {x: 78, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377458993
@@ -626,7 +626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 25}
+  m_AnchoredPosition: {x: -289, y: -1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409159142
@@ -662,9 +662,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Ability : Shooting 1 arrows at once
+  m_Text: 'Ability : Shooting 1 small arrows
 
-    Firing range : Shot'
+    Speed : Fast
+
+    Firing range
+    : Far'
 --- !u!222 &409159143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1505,7 +1508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 585, y: -149}
+  m_AnchoredPosition: {x: 554, y: -149}
   m_SizeDelta: {x: 602, y: 671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059738846
@@ -1634,7 +1637,7 @@ GameObject:
   - component: {fileID: 1071259926}
   - component: {fileID: 1071259925}
   m_Layer: 5
-  m_Name: 'Press [E] to exit '
+  m_Name: 'Press [W] to exit '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1692,7 +1695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Press [E] to exit '
+  m_Text: 'Press [W] to exit '
 --- !u!222 &1071259926
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1809,14 +1812,14 @@ RectTransform:
   m_GameObject: {fileID: 1129347977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0010791, y: 1.1920938, z: 0.98}
+  m_LocalScale: {x: 0.9610359, y: 1.14441, z: 0.9408}
   m_Children: []
   m_Father: {fileID: 711917896}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 642, y: 534}
+  m_AnchoredPosition: {x: 654, y: 534}
   m_SizeDelta: {x: 1098, y: 784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129347979
@@ -2045,8 +2048,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -657, y: 252}
-  m_SizeDelta: {x: 134, y: 133}
+  m_AnchoredPosition: {x: -657, y: 251.5}
+  m_SizeDelta: {x: 134, y: 126.4975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281875781
 MonoBehaviour:
@@ -2322,7 +2325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 26.084517}
+  m_AnchoredPosition: {x: -289, y: -1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664815769
@@ -2358,7 +2361,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ability : Shooting 3 arrows at once \nFiring range : Short"
+  m_Text: 'Ability : Shooting 3 arrows at once
+
+    Speed : Middle
+
+    Firing range
+    : Short'
 --- !u!222 &1664815770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2384,7 +2392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1760130192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2922,14 +2930,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b3257000217cb54db32c3fd3ece71e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af7012f35d1228741be93b2ea8a60a45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2981,7 +2989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300.00003, y: 1}
+  m_AnchoredPosition: {x: -289, y: -1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060654948
@@ -3017,8 +3025,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ability : Shooting 1 arrow / Charge \n                to increase damage
-    when  \n                shooting  \nFiring range : Middle"
+  m_Text: 'Ability : Shooting 1 large arrow
+
+    Speed : Slow
+
+    Firing range :
+    Middle'
 --- !u!222 &2060654949
 CanvasRenderer:
   m_ObjectHideFlags: 0

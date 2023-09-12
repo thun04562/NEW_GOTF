@@ -3,18 +3,24 @@ using UnityEngine.UI;
 
 public class GemNumberDisplay : MonoBehaviour
 {
+    PlayerControl playerControl;
     public Text gemNumberText;
 
     public void UpdateGemUI()
     {
-        int gemCount = PlayerPrefs.GetInt("GemCount");
+        
         if (gemNumberText != null)
         {
-            gemNumberText.text = gemCount.ToString();
+            gemNumberText.text = playerControl.gemCount.ToString();
         }
     }
 
     private void Start()
+    {
+        playerControl = FindObjectOfType<PlayerControl>();
+       
+    }
+    private void Update()
     {
         UpdateGemUI();
     }

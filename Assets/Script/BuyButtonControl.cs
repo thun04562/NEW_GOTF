@@ -4,9 +4,12 @@ using UnityEngine.UI;
 
 public class BuyButtonControl : MonoBehaviour
 {
+    PlayerControl playerControl;
+    public GameObject Arrow;
+    test test;
     public Button buyButton;
     private bool isSold = false;
-    private string buttonStateKey;
+    //private string buttonStateKey;
     private int valueGem = 0;
     public int price = 0;
     private int calculator = 0;
@@ -18,10 +21,10 @@ public class BuyButtonControl : MonoBehaviour
         gemDisplay = FindObjectOfType<GemNumberDisplay>();
 
         // Define a unique key for each button based on its name.
-        buttonStateKey = $"IsSold_{buyButton.gameObject.name}";
+       // buttonStateKey = $"IsSold_{buyButton.gameObject.name}";
 
         // Load the button state from PlayerPrefs when the game starts.
-        isSold = PlayerPrefs.GetInt(buttonStateKey, 0) == 1;
+        //isSold = PlayerPrefs.GetInt(buttonStateKey, 0) == 1;
 
         // Update the button text and interactable state accordingly.
         UpdateButtonState();
@@ -30,6 +33,9 @@ public class BuyButtonControl : MonoBehaviour
 
         // Clear button state on game start.
         ClearButtonStateOnGameStart();
+
+        test = FindObjectOfType<test>();
+        playerControl = FindObjectOfType<PlayerControl>();
     }
 
     private void OnBuyButtonClick()
@@ -38,7 +44,7 @@ public class BuyButtonControl : MonoBehaviour
         {
             // Handle the purchase logic here.
             // You can add code to deduct money, unlock an item, etc.
-            valueGem = PlayerPrefs.GetInt("GemCount");
+            valueGem = playerControl.gemCount;
             Debug.Log(valueGem);
             Debug.Log("This Item Price " + price.ToString());
             calculator = valueGem - price;
@@ -47,8 +53,8 @@ public class BuyButtonControl : MonoBehaviour
                 return;
             }
             Debug.Log("Now, you have money " + calculator.ToString());
-
-            PlayerPrefs.SetInt("GemCount", calculator);
+            playerControl.gemCount = calculator;
+            //PlayerPrefs.SetInt("GemCount", calculator);
             gemDisplay.UpdateGemUI();
             Debug.Log("after gemDisplay");
 
@@ -62,13 +68,10 @@ public class BuyButtonControl : MonoBehaviour
             isSold = true;
 
             // Save the button state to PlayerPrefs.
-            PlayerPrefs.SetInt(buttonStateKey, 1);
+            //PlayerPrefs.SetInt(buttonStateKey, 1);
 
             // Unlock the skill by setting its SkillUnlock component to true.
-            if (skillUnlock != null)
-            {
-                skillUnlock.isUnlocked = true;
-            }
+            test.BUYArrow(Arrow);
         }
     }
 
@@ -90,6 +93,6 @@ public class BuyButtonControl : MonoBehaviour
     private void ClearButtonStateOnGameStart()
     {
         // Clear the button state when the game starts.
-        PlayerPrefs.DeleteKey(buttonStateKey);
+        //PlayerPrefs.DeleteKey(buttonStateKey);
     }
 }

@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 7324860671845152780}
   - component: {fileID: 7324860671845152772}
   - component: {fileID: 5968530735144619628}
+  - component: {fileID: 673549072090943713}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324860671845152881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14ce636827d646644adc6cb44b6b6c23, type: 3}
   m_Name: 
@@ -475,10 +476,8 @@ MonoBehaviour:
   blueArrowBulletPrefab: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
   yellowArrowBulletPrefab: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
   redArrowBulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
-  greenArrowReloadDelay: 0.6
-  blueArrowReloadDelay: 0.3
-  yellowArrowReloadDelay: 1.2
-  redArrowReloadDelay: 0.8
+  reloadDelay: 1
+  canShoot: 1
 --- !u!114 &5968530735144619628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,3 +495,24 @@ MonoBehaviour:
   greenArrowOverride: {fileID: 22100000, guid: fae5e576fd8d3b94f9d7928b92b0cfe0, type: 2}
   blueArrowOverride: {fileID: 22100000, guid: 8365c57c2275fbb4da960180475fd1ba, type: 2}
   yellowArrowOverride: {fileID: 22100000, guid: 5da8b6af77e511c4b95fc497a07e4e5b, type: 2}
+--- !u!114 &673549072090943713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324860671845152881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51f6737ee3efad48b8d7b25e5183c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrows:
+  - {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+  currentArrow: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+  redArrow_Prefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+  greenArrow_Prefab: {fileID: 6306484217329833899, guid: 2ef75a62f4e19a84498efe3bd6ff6d58, type: 3}
+  blueArrow_Prefab: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
+  yellowArrow_Prefab: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
+  shootingPoint: {fileID: 7324860670684584358}
+  type: 0

@@ -39,7 +39,7 @@ public class ArrowUIController : MonoBehaviour
 
             // Determine the arrow type and change the player's animation accordingly.
             string arrowType = GetArrowType(currentSpriteIndex);
-            playerAnimationController.ChangeArrowAnimation(arrowType);
+          //  playerAnimationController.ChangeArrowAnimation(arrowType);
         }
     }
 

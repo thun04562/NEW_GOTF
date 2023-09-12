@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class OpenShop : MonoBehaviour
 {
-    private bool playerInRange = false;
+    private bool playerInRange;
     private SpriteRenderer spriteRenderer;
     private string currentSceneName; // To store the name of the current scene
     public PlayerControl playerControl;
+    public GameObject shopUI;
+    public bool openShop;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Initially, disable the SpriteRenderer
-        spriteRenderer.enabled = false;
+
 
         // Store the name of the current scene
-        currentSceneName = SceneManager.GetActiveScene().name;
+        //currentSceneName = SceneManager.GetActiveScene().name;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +28,7 @@ public class OpenShop : MonoBehaviour
         {
             playerInRange = true;
             // Enable the SpriteRenderer when the player enters the collider
-            spriteRenderer.enabled = true;
+            //spriteRenderer.enabled = true;
         }
     }
 
@@ -36,37 +38,27 @@ public class OpenShop : MonoBehaviour
         {
             playerInRange = false;
             // Disable the SpriteRenderer when the player exits the collider
-            spriteRenderer.enabled = false;
+            //spriteRenderer.enabled = false;
         }
     }
 
     private void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        
+        if (playerInRange && Input.GetKeyDown(KeyCode.W) && !openShop)
         {
-            // Check if the shop is already open
-            Scene skillShopScene = SceneManager.GetSceneByName("SkillShop");
-            if (!skillShopScene.isLoaded)
-            {
-                // Load the "SkillShop" scene additively, so the current scene is not restarted
-                SceneManager.LoadScene("SkillShop", LoadSceneMode.Additive);
-                Time.timeScale = 0f;
-            }
+
+            shopUI.SetActive(true);
+            openShop = true;
+            Time.timeScale = 0f;
         }
 
-        if (currentSceneName != "SkillShop" && Input.GetKeyDown(KeyCode.E))
+        else if ( playerInRange && Input.GetKeyDown(KeyCode.W) && openShop)
         {
-            // Unload the "SkillShop" scene if it's loaded and we are not in the "SkillShop" scene
-            Scene skillShopScene = SceneManager.GetSceneByName("SkillShop");
-            playerControl = FindObjectOfType<PlayerControl>();
-            if (skillShopScene.isLoaded)
-            {
-                Debug.Log("Before Close Shop and Update");
-                playerControl.UpdateGemCountUI();
-                Debug.Log("After Close Shop and Update");
-                SceneManager.UnloadScene("SkillShop");
-                Time.timeScale = 1f;
-            }
+
+            shopUI.SetActive(false);
+            openShop = false;
+            Time.timeScale = 1f;
         }
     }
 }

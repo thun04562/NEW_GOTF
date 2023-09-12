@@ -37,7 +37,7 @@ public class PlayerControl : MonoBehaviour
 
     public static int numberOfGems;
     public Text gemCountText;
-    public int gemCount = 0;
+    public int gemCount;
 
     public void CollectGem()
     {

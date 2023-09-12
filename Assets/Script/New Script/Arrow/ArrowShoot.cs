@@ -14,16 +14,10 @@ public class ArrowShoot : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject explodeEffect;
 
-    //[SerializeField] private GameObject yellowCharge;
-    //[SerializeField] private float chargeSpeed;
-    //[SerializeField] private float chargeTime;
-
- //   private bool isCharging;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rb.velocity = transform.right * speed;
     }
 
     public void Initialized()
