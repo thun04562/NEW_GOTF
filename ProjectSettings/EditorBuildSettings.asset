@@ -65,4 +65,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkillShop.unity
     guid: b6c9c054da2092f4d96dfed1b8118e0c
+  - enabled: 1
+    path: Assets/Scenes/StoryEnding 1.unity
+    guid: 29182b029cc4cd94dbb4a5b6bfbc0dff
+  - enabled: 1
+    path: Assets/Scenes/StoryEnding 2.unity
+    guid: 40a0d18c0caf039449ed7c2a737dca93
+  - enabled: 1
+    path: Assets/Scenes/StoryEnding 3.unity
+    guid: e5e02da543f14c2478dc4fce366a4899
+  - enabled: 1
+    path: Assets/Scenes/StoryEnding 4.unity
+    guid: dd66b98d4b096e64cba35545b7815fba
   m_configObjects: {}
