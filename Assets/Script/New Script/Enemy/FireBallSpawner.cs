@@ -27,7 +27,7 @@ public class FireBallSpawner : MonoBehaviour
         }
         
     }
-
+    
     void Spawn()
     {
         float X = Random.Range(minX, maxY);

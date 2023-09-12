@@ -1,3 +1,4 @@
+using BarthaSzabolcs.Tutorial_SpriteFlash;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,9 @@ public class Boss : MonoBehaviour
     private Animator anim;
     private float timeInCurrentState = 0f;
 
+    private SimpleFlash simpleFlash;
+
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -35,6 +39,8 @@ public class Boss : MonoBehaviour
         hpSlider.maxValue = maxHP;
         hpSlider.value = currentHP;
         nextFireballSummonTime = Time.time + fireballSummonInterval;
+        simpleFlash = GetComponent<SimpleFlash>();
+
     }
 
     private void Update()
@@ -156,7 +162,13 @@ public class Boss : MonoBehaviour
     {
 
         currentHP -= damage;
+        
         hpSlider.value = currentHP;
+
+        if (simpleFlash != null)
+        {
+            simpleFlash.Flash();
+        }
 
         // Handle transitions based on HP (e.g., transition to IdleRed when HP is low)
         if (currentHP <= 0)
