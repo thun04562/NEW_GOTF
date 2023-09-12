@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 350714741
-  m_SortingLayer: 14
+  m_SortingLayer: 15
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b65c419fb9d7d8246a1b12e9632090ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 25
-  maxDistance: 10
+  damage: 35
+  maxDistance: 2.5
   rb: {fileID: 141273537832885406}
   explodeEffect: {fileID: 2757673833973272001, guid: f65fa77246e8a894684e9bfc2631ea62, type: 3}
 --- !u!50 &141273537832885406
@@ -173,12 +173,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!68 &7293883987253883385
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 350714741
-  m_SortingLayer: 14
+  m_SortingLayer: 15
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b65c419fb9d7d8246a1b12e9632090ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -416,7 +416,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 350714741
-  m_SortingLayer: 14
+  m_SortingLayer: 15
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b65c419fb9d7d8246a1b12e9632090ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

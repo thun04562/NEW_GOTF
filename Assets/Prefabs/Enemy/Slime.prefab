@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1091978299
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: -8296385383580801948, guid: 03d7515dca05ead40a5a0cb710f134f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  healthEnemy: 100
+  healthEnemy: 40
   deathEffect: {fileID: 3755263068545323874, guid: 40296a4adedbda247b699a65996cdae8, type: 3}
   anim: {fileID: 0}
 --- !u!114 &7782947684574501862

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1091978299
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 1
   m_Sprite: {fileID: 7656261815636014491, guid: 11289ca090d42ac4f9b61c6a6d2e4302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDeadSound: {fileID: 0}
-  health: 60
+  health: 80
   skullBone: {fileID: 920654939065141149, guid: 1d1a22fc2e290274c8a7912eea3caa31, type: 3}
   smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
   rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}

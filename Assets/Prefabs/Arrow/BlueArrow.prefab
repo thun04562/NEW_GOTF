@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 350714741
-  m_SortingLayer: 14
+  m_SortingLayer: 15
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8d78d2ab6f3b68f4d9797efff5a0e6cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba431b9736119ac40984f67afd641445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  damage: 25
+  speed: 25
+  damage: 10
   maxDistance: 15
   rb: {fileID: 1761141513131467413}
   explodeEffect: {fileID: 7717175443286457124, guid: 2aa9cbb70bf317744a2f38b9ffcd367e, type: 3}
@@ -144,12 +144,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &6005855758000069242
 Animator:
   serializedVersion: 5

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 350714741
-  m_SortingLayer: 14
+  m_SortingLayer: 15
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 11d5084c154e39340ac9c5e1b345903e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 25
+  damage: 20
+  maxDistance: 7
   rb: {fileID: 7674259854465380523}
   explodeEffect: {fileID: 7717175443286457124, guid: 42d3abffa73f90b41a3fc31d98ddfd4e, type: 3}
 --- !u!61 &7674259854465380520

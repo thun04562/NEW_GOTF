@@ -241,7 +241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1127449919
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 03f8100d9952e70479d2733c30bdd23b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -471,12 +471,14 @@ MonoBehaviour:
   ShootSound: {fileID: 8300000, guid: 00316af64939f5040bc1b0d766124c1d, type: 3}
   playerArrow:
   - {fileID: 7324860670684584358}
-  greenArrowBulletPrefab: {fileID: 8200781156134895229, guid: 508a316828ca2924cbd1a080d9b16421, type: 3}
+  greenArrowBulletPrefab: {fileID: 6306484217329833899, guid: 2ef75a62f4e19a84498efe3bd6ff6d58, type: 3}
   blueArrowBulletPrefab: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
   yellowArrowBulletPrefab: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
   redArrowBulletPrefab: {fileID: 7674259854465380535, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
-  reloadDelay: 0.5
-  canShoot: 1
+  greenArrowReloadDelay: 0.6
+  blueArrowReloadDelay: 0.3
+  yellowArrowReloadDelay: 1.2
+  redArrowReloadDelay: 0.8
 --- !u!114 &5968530735144619628
 MonoBehaviour:
   m_ObjectHideFlags: 0
