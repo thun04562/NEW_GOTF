@@ -24695,6 +24695,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: arrows.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: arrows.Array.data[1]
+      value: 
+      objectReference: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: arrows.Array.data[2]
+      value: 
+      objectReference: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
     - target: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: blueArrowButton
       value: 

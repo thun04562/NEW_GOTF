@@ -100,9 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 40
-  maxDistance: 10
+  maxDistance: 7
   rb: {fileID: 6037398303826593101}
-  explodeEffect: {fileID: 7717175443286457124, guid: 0feff78c22680d642b63ad96c7575227, type: 3}
+  explodeEffect: {fileID: 7484858090159702411, guid: 0feff78c22680d642b63ad96c7575227, type: 3}
 --- !u!61 &6037398303826593102
 BoxCollider2D:
   m_ObjectHideFlags: 0

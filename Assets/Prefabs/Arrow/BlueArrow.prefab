@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba431b9736119ac40984f67afd641445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 30
   damage: 10
-  maxDistance: 15
+  maxDistance: 10
   rb: {fileID: 1761141513131467413}
-  explodeEffect: {fileID: 7717175443286457124, guid: 2aa9cbb70bf317744a2f38b9ffcd367e, type: 3}
+  explodeEffect: {fileID: 3747617084323156360, guid: 2aa9cbb70bf317744a2f38b9ffcd367e, type: 3}
 --- !u!61 &3841940745264797817
 BoxCollider2D:
   m_ObjectHideFlags: 0

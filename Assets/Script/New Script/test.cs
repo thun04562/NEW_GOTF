@@ -16,6 +16,8 @@ public class test : MonoBehaviour
 
     public Transform shootingPoint;
 
+    private float timeBtwShots;
+    public float startTimeBtwShots;
 
 
     public enum ArrowType
@@ -37,16 +39,28 @@ public class test : MonoBehaviour
 
     private void Update()
     {
+        if(timeBtwShots <= 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             ChangeArrow();
             
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-        }
+        }*/
     }
 
     public void BUYArrow(GameObject gameObject)
@@ -80,5 +94,7 @@ public class test : MonoBehaviour
         bullet.transform.position = shootingPoint.position;
         bullet.transform.localRotation = shootingPoint.rotation;
         bullet.GetComponent<ArrowShoot>().Initialized();
+        
+        timeBtwShots = startTimeBtwShots;
     }
 }

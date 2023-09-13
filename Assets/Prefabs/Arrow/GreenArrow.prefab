@@ -157,7 +157,7 @@ MonoBehaviour:
   damage: 35
   maxDistance: 2.5
   rb: {fileID: 141273537832885406}
-  explodeEffect: {fileID: 2757673833973272001, guid: f65fa77246e8a894684e9bfc2631ea62, type: 3}
+  explodeEffect: {fileID: 2527060835668269145, guid: f65fa77246e8a894684e9bfc2631ea62, type: 3}
 --- !u!50 &141273537832885406
 Rigidbody2D:
   serializedVersion: 4

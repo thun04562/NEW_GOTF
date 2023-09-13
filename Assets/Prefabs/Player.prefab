@@ -515,4 +515,5 @@ MonoBehaviour:
   blueArrow_Prefab: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
   yellowArrow_Prefab: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
   shootingPoint: {fileID: 7324860670684584358}
+  startTimeBtwShots: 0.6
   type: 0
