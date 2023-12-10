@@ -99,6 +99,8 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (isDashing)
         {
             return;
@@ -106,12 +108,11 @@ public class PlayerControl : MonoBehaviour
 
 
         // Player jump input
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && !StartCutscene.isCutsceneOn)
         {
             SoundManager.instance.PlaySound(jumpSound);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             
-
         }
 
         // Player move input
@@ -141,7 +142,14 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            if (StartCutscene.isCutsceneOn)
+            {
+                rb.velocity = Vector2.zero;
+            }
+            else
+            {
+                rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            }
         }
 
 
@@ -160,7 +168,7 @@ public class PlayerControl : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Mana >= 25)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && Mana >= 25 && !StartCutscene.isCutsceneOn)
         {
 
             Mana -= ManaCost;

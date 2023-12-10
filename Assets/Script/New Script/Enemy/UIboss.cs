@@ -10,9 +10,7 @@ public class UIboss : MonoBehaviour
 
 	void Start()
 	{
-
 		slider.maxValue = bossHealth.maxHP;
-
 	}
 
 	// Update is called once per frame
@@ -21,4 +19,5 @@ public class UIboss : MonoBehaviour
 		slider.value = bossHealth.currentHP;
 
 	}
+
 }
