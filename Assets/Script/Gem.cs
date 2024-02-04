@@ -26,8 +26,6 @@ public class Gem : MonoBehaviour
         if (collectGemCallback != null)
         {
             collectGemCallback.Invoke();
-            
-
         }
 
         GetComponent<SpriteRenderer>().enabled = false;

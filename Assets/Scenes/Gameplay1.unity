@@ -2468,14 +2468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5055534345408dd43abe513a7ca91b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponSwapSound: {fileID: 8300000, guid: ecd9dd76ee9e1434da775c92416e375c, type: 3}
-  arrowUIImage: {fileID: 1567038504}
-  arrowSprites:
-  - {fileID: 21300000, guid: ac7b5452e0eb4d048b510963877bb225, type: 3}
-  - {fileID: 21300000, guid: 69d4d6946e8dfed499bae97bdafb0675, type: 3}
-  - {fileID: 21300000, guid: 6bfe3bb0197b84343a8ae22c1e756727, type: 3}
-  - {fileID: 21300000, guid: 4c6dc2e1cbc0786429663299539ef8a9, type: 3}
-  playerAnimationController: {fileID: 7324860670704352206}
+  crossBowIcon: {fileID: 1567038504}
 --- !u!1 &198837465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0824806a856cebc4385255e4bad63b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemNumberText: {fileID: 0}
+  gemNumberText: {fileID: 1239130954}
 --- !u!4 &344879796
 Transform:
   m_ObjectHideFlags: 0
@@ -9351,7 +9344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8489097190621143302, guid: 685879f59c512e547b1fb4b17b4def1e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8489097190621143302, guid: 685879f59c512e547b1fb4b17b4def1e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9428,7 +9421,7 @@ PrefabInstance:
     - target: {fileID: 8489097190621143354, guid: 685879f59c512e547b1fb4b17b4def1e, type: 3}
       propertyPath: Arrow
       value: 
-      objectReference: {fileID: 6306484217329833899, guid: 2ef75a62f4e19a84498efe3bd6ff6d58, type: 3}
+      objectReference: {fileID: 4487427332072976975, guid: 2ef75a62f4e19a84498efe3bd6ff6d58, type: 3}
     - target: {fileID: 8489097190621143354, guid: 685879f59c512e547b1fb4b17b4def1e, type: 3}
       propertyPath: gemDisplay
       value: 
@@ -17066,7 +17059,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3daca6cf768bde04fa8ec14bd51ff0b7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17641,7 +17634,7 @@ PrefabInstance:
     - target: {fileID: 3408318229046216548, guid: e3ba4f5068d3c3641ad8462b36fc9d69, type: 3}
       propertyPath: Arrow
       value: 
-      objectReference: {fileID: 6037398303826593105, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
+      objectReference: {fileID: 6037398303826593107, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
     - target: {fileID: 3408318229046216548, guid: e3ba4f5068d3c3641ad8462b36fc9d69, type: 3}
       propertyPath: gemDisplay
       value: 
@@ -17664,7 +17657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3408318229046216569, guid: e3ba4f5068d3c3641ad8462b36fc9d69, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3408318229046216569, guid: e3ba4f5068d3c3641ad8462b36fc9d69, type: 3}
       propertyPath: m_AnchorMax.x
@@ -19384,7 +19377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7205237268003586289, guid: 50df54e6587e9c0489a35bc2e1f4c287, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7205237268003586289, guid: 50df54e6587e9c0489a35bc2e1f4c287, type: 3}
       propertyPath: m_AnchorMax.x
@@ -19465,7 +19458,7 @@ PrefabInstance:
     - target: {fileID: 7205237268003586300, guid: 50df54e6587e9c0489a35bc2e1f4c287, type: 3}
       propertyPath: Arrow
       value: 
-      objectReference: {fileID: 6005855758000069243, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
+      objectReference: {fileID: 7350852004142336357, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
     - target: {fileID: 7205237268003586300, guid: 50df54e6587e9c0489a35bc2e1f4c287, type: 3}
       propertyPath: gemDisplay
       value: 
@@ -24902,9 +24895,57 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: iconImage
+      value: 
+      objectReference: {fileID: 1567038504}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: currentArrow
+      value: 
+      objectReference: {fileID: 7674259854465380533, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: redArrow_Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: ac7b5452e0eb4d048b510963877bb225, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: blueArrow_Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bfe3bb0197b84343a8ae22c1e756727, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: greenArrow_Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 69d4d6946e8dfed499bae97bdafb0675, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: redArrow_Prefab
+      value: 
+      objectReference: {fileID: 7674259854465380533, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: blueArrow_Prefab
+      value: 
+      objectReference: {fileID: 7350852004142336357, guid: 8ecc66ff838807f4e9c41c3f3bbe578c, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: currentIconArrow
+      value: 
+      objectReference: {fileID: 21300000, guid: ac7b5452e0eb4d048b510963877bb225, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: yellowArrow_Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c6dc2e1cbc0786429663299539ef8a9, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: arrows.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: greenArrow_Prefab
+      value: 
+      objectReference: {fileID: 4487427332072976975, guid: 2ef75a62f4e19a84498efe3bd6ff6d58, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: yellowArrow_Prefab
+      value: 
+      objectReference: {fileID: 6037398303826593107, guid: b941562fc74811a4d975b16a34cb0d0e, type: 3}
+    - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
+      propertyPath: arrows.Array.data[0]
+      value: 
+      objectReference: {fileID: 7674259854465380533, guid: cf7295ff8b2cebc41bc7f46051f59704, type: 3}
     - target: {fileID: 673549072090943713, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: arrows.Array.data[1]
       value: 
@@ -25039,7 +25080,7 @@ PrefabInstance:
       objectReference: {fileID: 63226946}
     - target: {fileID: 7324860671845152778, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: gemCount
-      value: 5004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7324860671845152778, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: gemCountText
@@ -25099,17 +25140,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
---- !u!114 &7324860670704352206 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5968530735144619628, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
-  m_PrefabInstance: {fileID: 7324860670704352205}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bb2aab625259914b9386cca954ff6b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7674259854044551706
 PrefabInstance:
   m_ObjectHideFlags: 0
