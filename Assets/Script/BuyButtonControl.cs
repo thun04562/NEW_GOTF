@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BuyButtonControl : MonoBehaviour
 {
     PlayerControl playerControl;
-    public ArrowShoot Arrow;
+    public GameObject Arrow;
     test test;
     public Button buyButton;
     private bool isSold = false;
