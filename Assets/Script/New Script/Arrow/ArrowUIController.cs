@@ -3,9 +3,22 @@ using UnityEngine.UI;
 
 public class ArrowUIController : MonoBehaviour
 {
-    [SerializeField] private AudioClip WeaponSwapSound;
+    public static ArrowUIController instane;
+    public Image crossBowIcon;
 
-    public Image arrowUIImage; // Reference to the Image component of the arrow UI.
+
+    private void Awake()
+    {
+        instane = this;
+    }
+
+    public void changeImageGun(Sprite id)
+    {
+        crossBowIcon.sprite = id; 
+    }
+
+    /*[SerializeField] private AudioClip WeaponSwapSound;
+
     public Sprite[] arrowSprites; // Array of arrow sprites to cycle through.
     public PlayerAnimationArrowController playerAnimationController; // Reference to the PlayerAnimationController script.
 
@@ -58,5 +71,5 @@ public class ArrowUIController : MonoBehaviour
             default:
                 return "";
         }
-    }
+    }*/
 }

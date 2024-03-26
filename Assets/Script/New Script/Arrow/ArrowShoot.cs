@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ArrowShoot : MonoBehaviour
 {
+    public string ID;
+
+    public Sprite gun;
     public float speed = 20f;
     public int damage = 10;
 
