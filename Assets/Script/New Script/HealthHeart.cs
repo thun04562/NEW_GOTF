@@ -24,7 +24,6 @@ public class HealthHeart : MonoBehaviour
         for (int i = 0; i < playerHealth; i++)
         { 
             hearts[i].sprite = fullHeart;
-
         }
         
     }

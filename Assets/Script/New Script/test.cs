@@ -24,6 +24,13 @@ public class test : MonoBehaviour
 
     private Dictionary<string, GameObject> arrowDataTable = new Dictionary<string, GameObject>();
     private List<string> stringIDs = new List<string>();
+
+    private void OnValidate()
+    {
+        if (arrows.Count <= 0)
+            arrows.Add(redArrow_Prefab);
+    }
+
     public enum ArrowType
     {
         RedArrow,
