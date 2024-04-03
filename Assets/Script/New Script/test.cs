@@ -38,8 +38,7 @@ public class test : MonoBehaviour
 
     private void Start()
     {
-        var _redArrow = redArrow_Prefab.GetComponent<ArrowShoot>();
-        currentArrow = _redArrow;
+        currentArrow = arrows[0].GetComponent<ArrowShoot>();
         ArrowUIController.instane.changeImageGun(currentArrow.gun);
         arrowController = FindObjectOfType<PlayerAnimationArrowController>();
 
@@ -53,9 +52,9 @@ public class test : MonoBehaviour
         foreach (GameObject _arrow in arrowDataTable.Values)
         {
             var _arrowScript = _arrow.GetComponent<ArrowShoot>();
-
-            if (Path.Combine(Application.persistentDataPath, "/" + _arrowScript.ID + ".json") != null)
-                LoadData(_arrowScript.ID, Path.Combine(Application.persistentDataPath, "/" + _arrowScript.ID + ".json"));
+            var _path = Application.persistentDataPath + "/" + _arrowScript.ID;
+            
+            LoadData(_path);
         }
 
         foreach (string _id in stringIDs)
@@ -121,30 +120,42 @@ public class test : MonoBehaviour
     {
         arrows.Add(gameObject);
         var _arrowShoot = gameObject.GetComponent<ArrowShoot>();
+        Debug.Log(_arrowShoot.ID);
+
         SaveData(_arrowShoot);
     }
 
     private void SaveData(ArrowShoot _arrow)
     {
-        string _filePath = Path.Combine(Application.persistentDataPath, "/" + _arrow.ID + ".json");
-        if (!Directory.Exists(Application.streamingAssetsPath))
-            Directory.CreateDirectory(Application.streamingAssetsPath);
+        string _filePath = Application.persistentDataPath + "/" + _arrow.ID;
 
-        File.WriteAllText(_filePath, _arrow.ID);
+        ArrowData _arrowData = new ArrowData();
+        _arrowData.ID = _arrow.ID;
+
+
+
+        string _json = JsonUtility.ToJson(_arrowData);
+        File.WriteAllText(_filePath, _json);
     }
 
-    private void LoadData(string _arrowID, string _path)
+    private void LoadData(string _path)
     {
-        Debug.Log(_path);
-        string _data = File.ReadAllText(_path);
-        stringIDs.Add(_data);
+        if (File.Exists(_path))
+        {
+            string _jsonData = File.ReadAllText(_path);
+            ArrowData _arrowData = JsonUtility.FromJson<ArrowData>(_jsonData);
+            string _id = _arrowData.ID;
 
+            Debug.Log(_id);
+            arrows.Add(arrowDataTable[_id]);
+        }
     }
 
     void ChangeArrow()
     {
-        if (index < arrows.Count)
+        if (arrows.Count > 0)
         {
+            index = index % arrows.Count;
             currentArrow = arrows[index].GetComponent<ArrowShoot>();
             ArrowUIController.instane.changeImageGun(currentArrow.gun);
             arrowController.ChangeArrowAnimation(currentArrow.name);
@@ -152,10 +163,7 @@ public class test : MonoBehaviour
         }
         else
         {
-            currentArrow = arrows[0].GetComponent<ArrowShoot>();
-            ArrowUIController.instane.changeImageGun(currentArrow.gun);
-            arrowController.ChangeArrowAnimation(currentArrow.name);
-            index = 0;
+            Debug.LogError("No arrows in the list.");
         }
     }
 
@@ -169,6 +177,7 @@ public class test : MonoBehaviour
         
         timeBtwShots = startTimeBtwShots;
     }
+
 
 
     /*public void SaveGun()
@@ -197,6 +206,11 @@ public class test : MonoBehaviour
         }
     }*/
 
+}
+
+public class ArrowData
+{
+    public string ID;
 }
 
 /*[System.Serializable]
