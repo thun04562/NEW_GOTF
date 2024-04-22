@@ -170,6 +170,7 @@ MonoBehaviour:
   EnemyDeadSound: {fileID: 0}
   healthEnemy: 40
   deathEffect: {fileID: 3755263068545323874, guid: 40296a4adedbda247b699a65996cdae8, type: 3}
+  DroppingHeart: {fileID: 2756020169396706803, guid: db3dbfbd238158d45b17c90aa37e97d1, type: 3}
   anim: {fileID: 0}
 --- !u!114 &7782947684574501862
 MonoBehaviour:
