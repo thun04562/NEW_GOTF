@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class HPManipulator : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D _collision)
     {
-        if (collision.CompareTag("Player"))
+        if (_collision.gameObject.CompareTag("Player"))
         {
-            var _playerHurt = collision.GetComponent<PlayerHurt>();
+            var _playerHurt = _collision.gameObject.GetComponent<PlayerHurt>();
 
-            if(HealthHeart.playerHealth < 3)
-            _playerHurt.Heal();
+            if (HealthHeart.playerHealth < 3)
+                _playerHurt.Heal();
 
             Destroy(this);
         }
