@@ -23,6 +23,8 @@ public class PlayerHurt : MonoBehaviour
         }
     }
 
+    public void Heal() => HealthHeart.playerHealth++;
+
     public void TakeDamage()
     {
         HealthHeart.playerHealth--;

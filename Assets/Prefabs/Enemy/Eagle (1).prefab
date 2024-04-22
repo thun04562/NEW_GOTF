@@ -123,6 +123,7 @@ MonoBehaviour:
   smallBone: {fileID: 4957615869911113640, guid: dfaa071bf1d426d4b9a830688ee17ccf, type: 3}
   rBone: {fileID: 1304486558974843303, guid: 0dc79092191be7041a1129b3595ca03e, type: 3}
   lBone: {fileID: 1164266493951535632, guid: c2baf521a31f87f4f84728e3479840cb, type: 3}
+  DroppingHeart: {fileID: 2756020169396706803, guid: db3dbfbd238158d45b17c90aa37e97d1, type: 3}
   anim: {fileID: 4390858237171964451}
 --- !u!95 &4390858237171964451
 Animator:

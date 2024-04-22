@@ -8,6 +8,8 @@ public class DeadExplode : MonoBehaviour
     public int health;
     public GameObject skullBone, smallBone, rBone, lBone;
 
+    [SerializeField] private GameObject DroppingHeart;
+
     private bool isDead = false;
 
 
@@ -19,6 +21,12 @@ public class DeadExplode : MonoBehaviour
 
     }
 
+    private void RandomChance()
+    {
+        bool _isDropped = Random.Range(0, 3) >= 2;
+
+        if (_isDropped) Instantiate(DroppingHeart, transform.position, Quaternion.identity);
+    }
 
 
     public void TakeDamage(int damage)
@@ -49,6 +57,7 @@ public class DeadExplode : MonoBehaviour
         Instantiate(rBone, transform.position, Quaternion.identity);
         Instantiate(lBone, transform.position, Quaternion.identity);
 
+        RandomChance();
         // Deactivate the main enemy GameObject
         gameObject.SetActive(false);
 
