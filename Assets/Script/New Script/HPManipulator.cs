@@ -13,7 +13,7 @@ public class HPManipulator : MonoBehaviour
             if (HealthHeart.playerHealth < 3)
                 _playerHurt.Heal();
 
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
