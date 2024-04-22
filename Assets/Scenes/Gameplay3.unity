@@ -28440,7 +28440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5055534345408dd43abe513a7ca91b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossBowIcon: {fileID: 0}
+  crossBowIcon: {fileID: 293859413}
 --- !u!1 &1763338791
 GameObject:
   m_ObjectHideFlags: 0
