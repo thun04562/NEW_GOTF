@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 44421557}
   - component: {fileID: 44421558}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3963,7 +3963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307090121}
   - component: {fileID: 307090123}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4260,7 +4260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338001302}
   - component: {fileID: 338001303}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4916,7 +4916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389013489}
   - component: {fileID: 389013490}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5671,7 +5671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455397954}
   - component: {fileID: 455397956}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7214,7 +7214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584860884}
   - component: {fileID: 584860885}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8536,7 +8536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698400844}
   - component: {fileID: 698400845}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12175,7 +12175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109618575}
   - component: {fileID: 1109618576}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13651,7 +13651,7 @@ GameObject:
   - component: {fileID: 1231854553}
   - component: {fileID: 1231854555}
   - component: {fileID: 1231854554}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15095,7 +15095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1363473267}
   - component: {fileID: 1363473268}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16292,7 +16292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497294021}
   - component: {fileID: 1497294022}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18459,7 +18459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692242638}
   - component: {fileID: 1692242639}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19580,7 +19580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774555718}
   - component: {fileID: 1774555719}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: ForeRock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1101,7 +1101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65286325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -319.5858, y: 2.1347744, z: -6.6955805}
+  m_LocalPosition: {x: -237.80579, y: 2.1347744, z: -6.6955805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1590687942}
@@ -23402,7 +23402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324860671845152883, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.78
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 7324860671845152883, guid: 9b8d91c7d8634d2408bd6c83408eda5d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30244,6 +30244,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3-VineTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911608, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911608, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7419030456860911609, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -30291,6 +30299,10 @@ PrefabInstance:
     - target: {fileID: 7419030456860911611, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
       propertyPath: anim
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911611, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
@@ -36614,6 +36626,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3-VineTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911608, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911608, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7419030456860911609, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -36661,6 +36681,10 @@ PrefabInstance:
     - target: {fileID: 7419030456860911611, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
       propertyPath: anim
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419030456860911611, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39e63a87fbfc1e488a6d8cc1b7d6370, type: 3}
