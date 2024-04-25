@@ -844,7 +844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemInfo:
-  - 'And the monsters kidnap villagers to be its food.  '
+  - Then Leo hurried up to help all of the villagers and bring them back to the village.
+    And his village is going back to being peaceful again.
   textSpeed: 0.04
   itemInfoText: {fileID: 1968954600}
 --- !u!114 &1968954600
@@ -867,7 +868,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'And the monsters kidnap villagers to be its food.  '
+  m_text: Then Leo hurried up to help all of the villagers and bring them back to
+    the village. And his village is going back to being peaceful again.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 201469cab3481cf4087a43994a37290b, type: 2}
   m_sharedMaterial: {fileID: 7173485154996462457, guid: 201469cab3481cf4087a43994a37290b, type: 2}

@@ -11,21 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: ee166c4f39db39144b524fb2bbf47696
-  - enabled: 0
-    path: Assets/Scenes/Main Menu Continue.unity
-    guid: 402ebf954e134984c8af8b3103958b98
   - enabled: 1
     path: Assets/Scenes/Setting.unity
     guid: 9da84e8c3cb060b4db2fa6c23ca38235
-  - enabled: 0
-    path: Assets/Scenes/Setting2.unity
-    guid: e4986e95d89ec2d44a152e7566c9afd8
   - enabled: 1
     path: Assets/Scenes/Confirm Quit Game.unity
     guid: 1f2acaf20b72d4f4681a0ccd21649c0e
-  - enabled: 0
-    path: Assets/Scenes/Confirm Quit Game2.unity
-    guid: abbce2f31275c084c87052ed10c76d54
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: 02628f545490e3141a6e66c8233810f2
@@ -70,11 +61,8 @@ EditorBuildSettings:
     guid: 29182b029cc4cd94dbb4a5b6bfbc0dff
   - enabled: 1
     path: Assets/Scenes/StoryEnding 2.unity
-    guid: 40a0d18c0caf039449ed7c2a737dca93
-  - enabled: 1
-    path: Assets/Scenes/StoryEnding 3.unity
     guid: e5e02da543f14c2478dc4fce366a4899
   - enabled: 1
-    path: Assets/Scenes/StoryEnding 4.unity
+    path: Assets/Scenes/StoryEnding 3.unity
     guid: dd66b98d4b096e64cba35545b7815fba
   m_configObjects: {}
