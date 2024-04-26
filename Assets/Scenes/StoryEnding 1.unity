@@ -530,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 685}
+  m_AnchoredPosition: {x: 960, y: 686.5}
   m_SizeDelta: {x: 977, y: 545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699383720
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3a79bf5848313d24ea6efb388307c5ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -997,10 +997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemInfo:
-  - 'The Boss is dead now...
-
-    Leo finds out that there are so many monsters living
-    in this forest. And the monsters kidnap villagers to be its food.  '
+  - 'Leo fights the boss until it dies and he finds out that there are so many monsters
+    living in this forest and the monsters kidnap villagers to be its food.  '
   textSpeed: 0.04
   itemInfoText: {fileID: 1968954600}
 --- !u!114 &1968954600
@@ -1023,10 +1021,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Boss is dead now...
-
-    Leo finds out that there are so many monsters
-    living in this forest. And the monsters kidnap villagers to be its food.  '
+  m_text: 'Leo fights the boss until it dies and he finds out that there are so many
+    monsters living in this forest and the monsters kidnap villagers to be its food.  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 201469cab3481cf4087a43994a37290b, type: 2}
   m_sharedMaterial: {fileID: 7173485154996462457, guid: 201469cab3481cf4087a43994a37290b, type: 2}

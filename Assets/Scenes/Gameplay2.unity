@@ -22006,6 +22006,7 @@ GameObject:
   - component: {fileID: 910882317}
   - component: {fileID: 910882316}
   - component: {fileID: 910882315}
+  - component: {fileID: 910882318}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -22076,7 +22077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 910882316}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910882318}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Main Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &910882316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22115,6 +22128,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910882313}
   m_CullTransparentMesh: 1
+--- !u!114 &910882318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910882313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76a106f570a7f34a845674753140ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916078832
 GameObject:
   m_ObjectHideFlags: 0
